@@ -1,10 +1,49 @@
 ﻿import React from 'react'
+import ProjectCarousel from './ProjectCarousel'
+
+const myProjects = [
+    {
+        title: 'The First Hero',
+        role: 'Solo Programmer',
+        languagesUsed: 'Unreal Engine Blueprints',
+        description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
+        image: '/images/projects/TheFirstHeroImg.jpg',
+        projectLink: '',
+    },
+    {
+        title: 'The First Hero',
+        role: 'Solo Programmer',
+        languagesUsed: 'Unreal Engine Blueprints',
+        description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
+        image: '/images/projects/TheFirstHeroImg.jpg',
+        projectLink: '',
+    },
+    {
+        title: 'The First Hero',
+        role: 'Solo Programmer',
+        languagesUsed: 'Unreal Engine Blueprints',
+        description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
+        image: '/images/projects/TheFirstHeroImg.jpg',
+        projectLink: '',
+    },
+    {
+        title: 'The First Hero',
+        role: 'Solo Programmer',
+        languagesUsed: 'Unreal Engine Blueprints',
+        description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
+        image: '/images/projects/TheFirstHeroImg.jpg',
+        projectLink: '',
+    },
+]
 
 const Projects = () => {
     return (
         <section id="projects" className="min-h-screen max-w-6xl mx-auto px-6 py-20">
             <h2 className="text-4xl font-bold mb-8">Projects</h2>
-            {/* TODO: Add my projects grid here */}
+            {/* Project Carousel */}
+            <section id="projects-carousel" className="px-4 md:px-12">
+                <ProjectCarousel projects={myProjects} />
+            </section>
             <p className="text-gray-600">Coming Soon...</p>
         </section>
     );

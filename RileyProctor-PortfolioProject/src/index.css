@@ -29,3 +29,9 @@ body * {
 input, textarea, [contenteditable="true"] {
     caret-color: auto !important;
 }
+
+.slick-prev::before,
+.slick-next::before {
+    color: black;
+    font-size: 30px;
+}
