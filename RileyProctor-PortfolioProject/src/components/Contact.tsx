@@ -46,10 +46,12 @@ const Contact = () => {
                 </p>
             </div>
 
+            {/* Now playing... */}
             <div className="mt-10 text-sm text-gray-400">
                 <p className="italic">Currently playing: <span className="text-white font-medium">Expedition 33</span></p>
             </div>
 
+            {/* Built with and year */}
             <footer className="mt-12 text-sm text-gray-500">
                 <p>&copy; {new Date().getFullYear()} Riley Proctor</p>
                 <p>Built with React, Vite, and Tailwind CSS</p>
