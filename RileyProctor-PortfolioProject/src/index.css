@@ -20,6 +20,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+
+body * {
+    caret-color: transparent;
     font-family: "Inter", serif;
+}
+
+input, textarea, [contenteditable="true"] {
+    caret-color: auto !important;
 }
