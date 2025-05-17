@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaItchIo, FaEnvelope } from 'react-icons/fa'
 
 const Contact = () => {
     return (
-        <section id="contact" className="bg-gray-900 text-white py-18 min-h-[90vh] text-center">
+        <section id="contact" className="bg-gray-900 text-white py-18 min-h-[89vh] text-center">
             <h2 className="text-5xl font-bold mb-10">Contact Me</h2>
 
             {/* Social Icons */}
@@ -38,12 +38,23 @@ const Contact = () => {
             </form>
 
             {/* Footer */}
+            {/* Sign Off & Quote */}
             <div className="text-center mt-12 text-gray-500">
                 <p className="mb-4 italic">Thanks for reaching out - I'm always ready for new challenges and collaborations.</p>
                 <p className="text-sm text-gray-400">
                     <span className="italic">"Hesitation is defeat."</span> - Isshin, The Sword Saint
                 </p>
             </div>
+
+            <div className="mt-10 text-sm text-gray-400">
+                <p className="italic">Currently playing: <span className="text-white font-medium">Expedition 33</span></p>
+            </div>
+
+            <footer className="mt-12 text-sm text-gray-500">
+                <p>&copy; {new Date().getFullYear()} Riley Proctor</p>
+                <p>Built with React, Vite, and Tailwind CSS</p>
+            </footer>
+
         </section>
     );
 };
