@@ -1,15 +1,16 @@
-﻿import React from 'react';
+﻿import React from 'react'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-md z-50">
-            <div className="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
+            <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold">Riley Proctor</div>
-                <ul className="flex space-x-6 text-gray-700 font-medium">
-                    <li><a href="#home" className="hover:text-blue-600 transition">Home</a></li>
-                    <li><a href="#projects" className="hover:text-blue-600 transition">Projects</a></li>
-                    <li><a href="#about" className="hover:text-blue-600 transition">About</a></li>
-                    <li><a href="#contact" className="hover:text-blue-600 transition">Contact</a></li>
+                <ul className="flex flex-row gap-8 text-gray-700 font-medium text-lg">
+                    <li><Link to="home" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">Home</Link></li>
+                    <li><Link to="projects" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">Projects</Link></li>
+                    <li><Link to="about" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">About</Link></li>
+                    <li><Link to="contact" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">Contact</Link></li>
                 </ul>
             </div>
         </nav>
