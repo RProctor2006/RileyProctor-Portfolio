@@ -1,4 +1,4 @@
-﻿import React from 'react'
+﻿//import React from 'react'
 import { FaGithub, FaLinkedin, FaItchIo, FaEnvelope } from 'react-icons/fa'
 
 const Contact = () => {
