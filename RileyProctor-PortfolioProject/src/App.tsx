@@ -6,7 +6,7 @@ import Projects from './components/Projects'
 import About from './components/About'
 import Contact from './components/Contact'
 
-import React from 'react';
+//import React from 'react';
 
 function App() {
     return (
