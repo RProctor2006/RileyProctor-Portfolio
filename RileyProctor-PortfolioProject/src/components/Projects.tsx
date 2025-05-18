@@ -44,7 +44,6 @@ const Projects = () => {
             <section id="projects-carousel" className="px-4 md:px-12">
                 <ProjectCarousel projects={myProjects} />
             </section>
-            <p className="text-gray-600">Coming Soon...</p>
         </section>
     );
 };
