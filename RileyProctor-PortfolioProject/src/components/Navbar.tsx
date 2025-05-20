@@ -1,7 +1,16 @@
 ﻿//import React from 'react'
-import { Link } from 'react-scroll'
+import { Link, scrollSpy } from 'react-scroll'
+import { useEffect } from 'react'
+
+
 
 const Navbar = () => {
+
+    //Updates the navbar link on start
+    useEffect(() => {
+        scrollSpy.update();
+    }, []);
+    
     return (
         <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-md z-50">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
