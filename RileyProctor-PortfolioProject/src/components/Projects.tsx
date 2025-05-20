@@ -3,35 +3,67 @@ import ProjectCarousel from './ProjectCarousel'
 
 const myProjects = [
     {
+        //Card Elements
         title: 'The First Hero',
         role: 'Solo Programmer',
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
         image: `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`,
+        
+        //Project Details Elements
+        overview: 'Test 1',
+        tech: [''],
+        media: [''],
+        challenges: '',
+        
         projectLink: '',
     },
     {
+        //Card Elements
         title: 'The First Hero',
         role: 'Solo Programmer',
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
         image: `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`,
+
+        //Project Details Elements
+        overview: 'Test 2',
+        tech: [''],
+        media: [''],
+        challenges: '',
+
         projectLink: '',
     },
     {
+        //Card Elements
         title: 'The First Hero',
         role: 'Solo Programmer',
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
         image: `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`,
+
+        //Project Details Elements
+        overview: '',
+        tech: [''],
+        media: [''],
+        challenges: '',
+
         projectLink: '',
     },
     {
+        //Card Elements
         title: 'The First Hero',
         role: 'Solo Programmer',
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
         image: `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`,
+
+        //Project Details Elements
+        overview: '',
+        tech: [''],
+        media: [''],
+        challenges: '',
+
         projectLink: '',
     },
 ]

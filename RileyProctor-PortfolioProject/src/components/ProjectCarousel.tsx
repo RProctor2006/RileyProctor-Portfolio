@@ -6,15 +6,24 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import ProjectDetails from "./ProjectDetails.tsx";
 
 
 {/* Project Template */}
 type Project = {
+    //Card elements
     title: string;
     role: string;
     languagesUsed: string;
     description: string;
     image: string;
+
+    //Tab elements
+    overview: string;
+    tech: string[];
+    media: string[];
+    challenges: string;
+    
     projectLink: string;
 };
 
@@ -47,6 +56,9 @@ const CustomNextArrow = (props: any) => {
 }
 
 const ProjectCarousel = ({ projects }: Props) => {
+
+    const [showDetails] = useState(false);
+    const [detailsIndex, setDetailsIndex] =useState<number | null>(null);
     const [activeSlide, setActiveSlide] = useState(0);
 
     {/* Carousel Settings */}
@@ -61,7 +73,10 @@ const ProjectCarousel = ({ projects }: Props) => {
         arrows: true,
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />,
-        beforeChange: (_: number, next: number) => setActiveSlide(next),
+        beforeChange: (_: number, next: number) => {
+            setActiveSlide(next);
+            if (detailsIndex !== null) setDetailsIndex(next);   
+        },
         responsive: [
             {
                 breakpoint: 1024,
@@ -71,6 +86,8 @@ const ProjectCarousel = ({ projects }: Props) => {
             },
         ],
     };
+    
+    
 
     {/* Main Carousel Section */}
     return (
@@ -78,20 +95,46 @@ const ProjectCarousel = ({ projects }: Props) => {
             <Slider {...settings}>
                 {projects.map((project, i) => (
                     <div key={i} className="px-4 transition-transform duration-300">
-                        <div className={`bg-white p-4 rounded-lg shadow-md transform ${i === activeSlide ? 'scale-105 shadow-2xl z-10' : 'scale-95 opacity-70'}`}>
+                        <div
+                            className={`bg-white p-4 rounded-lg shadow-md transform ${i === activeSlide ? 'scale-105 shadow-2xl z-10' : 'scale-95 opacity-70'}`}>
                             {/* Display Project Variables */}
-                            <img src={project.image} alt={project.title} className="w-64 mx-auto aspect-square object-cover rounded" />
+                            <img src={project.image} alt={project.title}
+                                 className="w-64 mx-auto aspect-square object-cover rounded"/>
+
                             <h3 className="text-lg font-bold mt-4">{project.title}</h3>
-                            <h2 className="text-lg font-semibold mt-3">{project.role}</h2>
-                            <h2 className="text-lg font-semibold mt-3">{project.languagesUsed}</h2>
+                            <div className="text-sm text-gray-700 font-medium">
+                                <span className="font-bold">Role:</span> {project.role}
+                            </div>
+                            <div className="text-sm text-gray-700">
+                                <span className="font-bold">Languages Used:</span> {project.languagesUsed}
+                            </div>
                             <p className="text-gray-600 mt-2">{project.description}</p>
 
-                            {/* Link to View Project */}
-                            <a href={project.projectLink} target="_blank" rel="noopner noreferrer" className="text-blue-50 hover:underline mt-3 inline-block">View Project</a>
+                            {!showDetails && i === activeSlide && (
+                                <button
+                                    className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                                    onClick={() => setDetailsIndex(i)}
+                                >
+                                    View Project
+                                </button>
+
+                            )}
                         </div>
                     </div>
                 ))}
             </Slider>
+
+
+            {detailsIndex !== null && (
+                <ProjectDetails
+                    title={projects[detailsIndex].title}
+                    overview={projects[detailsIndex].overview}
+                    tech={projects[detailsIndex].tech}
+                    media={projects[detailsIndex].media}
+                    challenges={projects[detailsIndex].challenges}
+                    onClose={() => setDetailsIndex(null)}
+                />
+            )}
         </div>
     );
 };
