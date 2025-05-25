@@ -9,8 +9,9 @@ import Contact from './components/Contact'
 //import React from 'react';
 
 function App() {
+    
     return (
-        <div id="root" className="max-w-[1280px] mx-auto p-8 text-center">vv
+        <div id="root" className="max-w-screen mx-auto p-8 text-center bg-white text-black dark:bg-gray-900 dark:text-white">
             <Navbar />
             <main className="">
                 <Hero />

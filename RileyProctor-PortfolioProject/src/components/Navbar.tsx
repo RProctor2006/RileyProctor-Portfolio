@@ -2,6 +2,8 @@
 import { Link, scrollSpy } from 'react-scroll'
 import { useEffect } from 'react'
 
+import ThemeSwitchButton from "./ThemeSwitchButton.tsx";
+
 
 
 const Navbar = () => {
@@ -12,10 +14,11 @@ const Navbar = () => {
     }, []);
     
     return (
-        <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-md z-50">
+        <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-md z-50 dark:bg-gray-900/80 dark:text-white">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold">Riley Proctor</div>
-                <ul className="flex flex-row gap-8 text-gray-700 font-medium text-lg">
+                <ThemeSwitchButton />
+                <ul className="flex flex-row gap-8 text-gray-700 font-medium text-lg dark:text-gray-300">
                     <li><Link to="home" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">Home</Link></li>
                     <li><Link to="projects" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">Projects</Link></li>
                     <li><Link to="about" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">About</Link></li>
