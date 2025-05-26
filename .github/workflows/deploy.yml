@@ -23,7 +23,7 @@ jobs:
       
       - name: Install dependencies
         run: npm ci
-        #working-directory: RileyProctor-PortfolioProject
+        working-directory: RileyProctor-PortfolioProject
       
       - name: Build project
         run: npm run build
