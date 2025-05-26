@@ -23,7 +23,7 @@ body {
     font-family: "Inter", serif;
 }
 
-input, textarea, [contenteditable="true"] {
-    caret-color: auto !important;
+.dark .slick-dots li button:before {
+    color: white;
 }
 

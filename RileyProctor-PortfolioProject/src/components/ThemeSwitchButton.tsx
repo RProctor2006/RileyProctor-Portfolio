@@ -1,31 +1,24 @@
-﻿
+﻿import {useEffect, useState} from "react";
+
 const ToggleThemeButton = () => {
 
-    let buttonText = document.documentElement.classList.contains("dark") ? "light" : "dark";
+    const [isDark, setIsDark] = useState(true);
     
-    const UpdateButtonText = () => {
-        buttonText = document.documentElement.classList.contains("dark") ? "light" : "dark";
-    }
-    
-
-    const ThemeSwitch = () => {
-        if (document.documentElement.classList.contains("dark")) {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("theme", "light");
-            UpdateButtonText();
-            return;
+    useEffect(() => {
+        const root = window.document.documentElement;
+        if (isDark) {
+            root.classList.add('dark');
+        } else {
+            root.classList.remove('dark');
         }
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-        UpdateButtonText();
-    }
+    }, [isDark]);
     
     return (
         <button
-            onClick={ThemeSwitch}
+            onClick={() => setIsDark(!isDark)}
             className="rounded-lg bg-blue-600 text-white hover:bg-blue-700 min-h-8 min-w-64"
         >
-            {buttonText}
+            {isDark ? 'Light Mode' : 'Dark Mode'}
         </button>
     )
 }
