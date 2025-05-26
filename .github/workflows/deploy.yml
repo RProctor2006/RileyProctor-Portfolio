@@ -27,7 +27,7 @@ jobs:
       
       - name: Build project
         run: npm run build
-        #working-directory: RileyProctor-PortfolioProject
+        working-directory: RileyProctor-PortfolioProject
         
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
