@@ -35,7 +35,7 @@ const CustomPrevArrow = (props: any) => {
     const { onClick } = props;
     return (
         <div
-            className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-black"
+            className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-black dark:text-white"
             onClick={onClick}
         >
             <FaArrowLeft size={30} />
@@ -47,7 +47,7 @@ const CustomNextArrow = (props: any) => {
     const { onClick } = props;
     return (
         <div
-            className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-black"
+            className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-black dark:text-white"
             onClick={onClick}
         >
             <FaArrowRight size={30} />
@@ -99,7 +99,7 @@ const ProjectCarousel = ({ projects }: Props) => {
                             className={`bg-white p-4 rounded-lg shadow-md transform ${i === activeSlide ? 'scale-105 shadow-2xl z-10' : 'scale-95 opacity-70'}`}>
                             {/* Display Project Variables */}
                             <img src={project.image} alt={project.title}
-                                 className="w-64 mx-auto aspect-square object-cover rounded"/>
+                                 className={`w-64 mx-auto aspect-square object-cover rounded-lg`}/>
 
                             <h3 className="text-lg font-bold mt-4">{project.title}</h3>
                             <div className="text-sm text-gray-700 font-medium">
@@ -117,7 +117,6 @@ const ProjectCarousel = ({ projects }: Props) => {
                                 >
                                     View Project
                                 </button>
-
                             )}
                         </div>
                     </div>
