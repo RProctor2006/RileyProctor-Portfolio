@@ -91,12 +91,12 @@ const ProjectCarousel = ({ projects }: Props) => {
 
     {/* Main Carousel Section */}
     return (
-        <div className="my-12">
+        <div className="my-12 scale-110">
             <Slider {...settings}>
                 {projects.map((project, i) => (
                     <div key={i} className="px-4 transition-transform overflow-visible duration-300">
                         <div
-                            className={`bg-white p-4 rounded-lg shadow-md transform overflow-visible  ${i === activeSlide ? 'scale-100 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
+                            className={`bg-white p-4 rounded-lg shadow-md transform outline-solid dark:outline-black ${i === activeSlide ? 'scale-97 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
                             {/* Display Project Variables */}
                             <img src={project.image} alt={project.title}
                                  className={`w-64 mx-auto aspect-square object-cover rounded-lg`}/>
