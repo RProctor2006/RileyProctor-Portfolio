@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="text-2xl font-bold">Riley Proctor</div>
                 <ThemeSwitchButton />
-                <ul className="flex flex-row gap-8 text-gray-700 font-medium text-lg dark:text-gray-300">
+                <ul className="flex flex-row gap-8 text-gray-700 font-medium text-lg dark:text-gray-300 dark:shadow-white">
                     <li><Link to="home" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">Home</Link></li>
                     <li><Link to="projects" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">Projects</Link></li>
                     <li><Link to="about" smooth={true} duration={500} spy={true} offset={-80} activeClass="font-semibold" className="hover:text-blue-600 cursor-pointer transition-colors duration-300">About</Link></li>
