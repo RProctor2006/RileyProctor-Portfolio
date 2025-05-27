@@ -21,7 +21,14 @@ type Project = {
     //Tab elements
     overview: string;
     overviewVideo: string;
-    tech: string[];
+    
+    mechanic1Name: string;
+    mechanic1Images: string[];
+    mechanic1Showcase: string;
+    mechanic2Name: string;
+    mechanic2Images: string[];
+    mechanic2Showcase: string;
+    
     media: string[];
     challenges: string;
     
@@ -130,7 +137,12 @@ const ProjectCarousel = ({ projects }: Props) => {
                     title={projects[detailsIndex].title}
                     overview={projects[detailsIndex].overview}
                     overviewVideo={projects[detailsIndex].overviewVideo}
-                    tech={projects[detailsIndex].tech}
+                    mechanic1Name={projects[detailsIndex].mechanic1Name}
+                    mechanic1Images={projects[detailsIndex].mechanic1Images}
+                    mechanic1Showcase={projects[detailsIndex].mechanic1Showcase}
+                    mechanic2Name={projects[detailsIndex].mechanic2Name}
+                    mechanic2Images={projects[detailsIndex].mechanic2Images}
+                    mechanic2Showcase={projects[detailsIndex].mechanic2Showcase}
                     media={projects[detailsIndex].media}
                     challenges={projects[detailsIndex].challenges}
                     onClose={() => setDetailsIndex(null)}

@@ -1,12 +1,17 @@
 ﻿import { useState } from 'react';
 
-type Tab = 'Overview' | 'Tech' | 'Media' | 'Challenges';
+type Tab = 'Overview' | 'Mechanics' | 'Media' | 'Challenges';
 
 interface ProjectDetailsProps {
     title: string;
     overview: string;
     overviewVideo: string;
-    tech: string[];
+    mechanic1Name: string;
+    mechanic1Images: string[];
+    mechanic1Showcase: string;
+    mechanic2Name: string;
+    mechanic2Images: string[];
+    mechanic2Showcase: string;
     media: string[]; //Urls to images or video embeds
     challenges: string;
     onClose: () => void;
@@ -16,7 +21,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     title,
     overview,
     overviewVideo,
-    tech,
+    mechanic1Name,
+    mechanic1Images,
+    mechanic1Showcase,
+    mechanic2Name,
+    mechanic2Images,
+    mechanic2Showcase,
     media,
     challenges,
     onClose
@@ -29,7 +39,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 return (
                     <div>
                         <iframe
-                            className="float-left mr-4 mb-4 rounded-lg shadow-lg w-[500px] h-[281px]"
+                            className="float-left mr-4 rounded-lg shadow-lg w-[500px] h-[281px]"
                             src={overviewVideo}
                             frameBorder="0"
                             allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -40,13 +50,29 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     </div>
                 )
             
-            case 'Tech':
+            case 'Mechanics':
                 return (
-                    <ul className="list-disc list-inside text-left text-gray-700">
-                        {(tech?.length > 0 ? tech : ['No tech listed']).map((item, idx) => (
-                            <li key={idx}>{item}</li>
-                        ))}
-                    </ul>
+                    <div>
+                        <h1 className="text-left text-2xl pb-5">{mechanic1Name}:</h1>
+
+                        <div className="mb-4">
+                            <iframe
+                                className="rounded-lg shadow-lg w-[375px] h-[210.75px]"
+                                src={mechanic1Showcase}
+                                frameBorder="0"
+                                allow="autoplay; clipboard-write; encrypyed-media; gyroscope; picture-in-picture"
+                            ></iframe>
+                        </div>
+                        <div className="space-y-4">
+                            {mechanic1Images.map((src, index) => (
+                                <img
+                                    key={index}
+                                    src={src}
+                                    className="w-94 h-auto rounded-lg shadow-md"
+                                />
+                            ))}
+                        </div>
+                    </div>
                 );    
 
             case 'Media':
@@ -72,7 +98,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             </div>
             
             <div className="flex space-x-4 border-b pb-2 mb-4">
-                {(['Overview', 'Tech', 'Media', 'Challenges'] as Tab[]).map(tab => (
+                {(['Overview', 'Mechanics', 'Media', 'Challenges'] as Tab[]).map(tab => (
                     <button key={tab} className={`pb-2 font-medium transition 
                     ${activeTab === tab 
                         ? 'border-b-2 border-blue-600 text-blue-600' 
