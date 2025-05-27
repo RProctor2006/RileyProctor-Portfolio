@@ -5,6 +5,7 @@ type Tab = 'Overview' | 'Tech' | 'Media' | 'Challenges';
 interface ProjectDetailsProps {
     title: string;
     overview: string;
+    overviewVideo: string;
     tech: string[];
     media: string[]; //Urls to images or video embeds
     challenges: string;
@@ -14,6 +15,7 @@ interface ProjectDetailsProps {
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     title,
     overview,
+    overviewVideo,
     tech,
     media,
     challenges,
@@ -24,7 +26,19 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     const renderTabContent = () => {
         switch (activeTab) {
             case 'Overview':
-                return <p className="text-left text-gray-700">{overview}</p>;
+                return (
+                    <div>
+                        <iframe
+                            className="float-left mr-4 mb-4 rounded-lg shadow-lg w-[500px] h-[281px]"
+                            src={overviewVideo}
+                            frameBorder="0"
+                            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        ></iframe>
+                        <div>
+                            <p className="whitespace-pre-line flex-1 text-left text-gray-700 dark:text-gray-300">{overview}</p>
+                        </div>
+                    </div>
+                )
             
             case 'Tech':
                 return (
@@ -51,7 +65,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     
     
     return (
-        <div className="mt-10 max-w-5xl mx-auto bg-white p-6 rounded-2xl shadow-lg border transition-all duration-300">
+        <div className="mt-10 max-w-5xl mx-auto bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border transition-all duration-300">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-3xl font-bold text-graay-900">{title}</h2>
                 <button onClick={onClose} className="text-sm px-3 py-1 rounded bg-red-500 text-white hover:bg-red-600 transition">Close</button>
@@ -62,7 +76,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                     <button key={tab} className={`pb-2 font-medium transition 
                     ${activeTab === tab 
                         ? 'border-b-2 border-blue-600 text-blue-600' 
-                        : 'text-gray-500 hover:text-blue-600'
+                        : 'text-gray-400 hover:text-blue-600'
                     }`}
                     onClick={() => setActiveTab(tab)}>{tab}</button>
                 ))}

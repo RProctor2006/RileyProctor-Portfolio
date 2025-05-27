@@ -20,6 +20,7 @@ type Project = {
 
     //Tab elements
     overview: string;
+    overviewVideo: string;
     tech: string[];
     media: string[];
     challenges: string;
@@ -128,6 +129,7 @@ const ProjectCarousel = ({ projects }: Props) => {
                 <ProjectDetails
                     title={projects[detailsIndex].title}
                     overview={projects[detailsIndex].overview}
+                    overviewVideo={projects[detailsIndex].overviewVideo}
                     tech={projects[detailsIndex].tech}
                     media={projects[detailsIndex].media}
                     challenges={projects[detailsIndex].challenges}
