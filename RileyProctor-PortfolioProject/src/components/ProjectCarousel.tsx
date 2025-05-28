@@ -99,7 +99,7 @@ const ProjectCarousel = ({ projects }: Props) => {
 
     {/* Main Carousel Section */}
     return (
-        <div className="my-12 scale-110">
+        <div className="my-12 px-4 md:px-8">
             <Slider {...settings}>
                 {projects.map((project, i) => (
                     <div key={i} className="px-4 transition-transform overflow-visible duration-300">
@@ -107,7 +107,7 @@ const ProjectCarousel = ({ projects }: Props) => {
                             className={`bg-white p-4 rounded-lg shadow-md transform outline-solid dark:outline-black ${i === activeSlide ? 'scale-97 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
                             {/* Display Project Variables */}
                             <img src={project.image} alt={project.title}
-                                 className={`w-64 mx-auto aspect-square object-cover rounded-lg`}/>
+                                 className={`w-full mx-auto aspect-square object-cover rounded-lg`}/>
 
                             <h3 className="text-lg font-bold mt-4">{project.title}</h3>
                             <div className="text-sm text-gray-700 font-medium">
@@ -133,20 +133,22 @@ const ProjectCarousel = ({ projects }: Props) => {
 
 
             {detailsIndex !== null && (
-                <ProjectDetails
-                    title={projects[detailsIndex].title}
-                    overview={projects[detailsIndex].overview}
-                    overviewVideo={projects[detailsIndex].overviewVideo}
-                    mechanic1Name={projects[detailsIndex].mechanic1Name}
-                    mechanic1Images={projects[detailsIndex].mechanic1Images}
-                    mechanic1Showcase={projects[detailsIndex].mechanic1Showcase}
-                    mechanic2Name={projects[detailsIndex].mechanic2Name}
-                    mechanic2Images={projects[detailsIndex].mechanic2Images}
-                    mechanic2Showcase={projects[detailsIndex].mechanic2Showcase}
-                    media={projects[detailsIndex].media}
-                    challenges={projects[detailsIndex].challenges}
-                    onClose={() => setDetailsIndex(null)}
-                />
+                <div className="mt-12">
+                    <ProjectDetails
+                        title={projects[detailsIndex].title}
+                        overview={projects[detailsIndex].overview}
+                        overviewVideo={projects[detailsIndex].overviewVideo}
+                        mechanic1Name={projects[detailsIndex].mechanic1Name}
+                        mechanic1Images={projects[detailsIndex].mechanic1Images}
+                        mechanic1Showcase={projects[detailsIndex].mechanic1Showcase}
+                        mechanic2Name={projects[detailsIndex].mechanic2Name}
+                        mechanic2Images={projects[detailsIndex].mechanic2Images}
+                        mechanic2Showcase={projects[detailsIndex].mechanic2Showcase}
+                        media={projects[detailsIndex].media}
+                        challenges={projects[detailsIndex].challenges}
+                        onClose={() => setDetailsIndex(null)}
+                    />
+                </div>
             )}
         </div>
     );
