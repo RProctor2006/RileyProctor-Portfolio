@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaItchIo, FaEnvelope } from 'react-icons/fa'
 
 const Contact = () => {
     return (
-        <section id="contact" className="bg-gray-900 text-white py-18 min-h-[89vh] text-center">
+        <section id="contact" className="bg-gray-900 text-white py-19 max-w-225 mx-auto min-h-[89vh] text-center">
             <h2 className="text-5xl font-bold mb-10">Contact Me</h2>
 
             {/* Social Icons */}
@@ -48,7 +48,7 @@ const Contact = () => {
 
             {/* Now playing... */}
             <div className="mt-10 text-sm text-gray-400">
-                <p className="italic">Currently playing: <span className="text-white font-medium">Expedition 33</span></p>
+                <p className="italic">Currently playing: <span className="text-white font-medium">Elden Ring: Nightreign</span></p>
             </div>
 
             {/* Built with and year */}
