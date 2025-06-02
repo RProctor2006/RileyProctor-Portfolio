@@ -2,7 +2,7 @@
   "name": "rileyproctor-portfolioprojectpackage",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://rproctor2006.github.io/RileyProctor-Portfolio",
+  "homepage": "https://www.rileyproctor.dev",
   "type": "module",
   "scripts": {
     "dev": "vite",
