@@ -8,7 +8,7 @@ const myProjects = [
         role: 'Solo Programmer',
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
-        image: `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`,
+        image: `/images/projects/TheFirstHeroImg.png`,
         
         //Project Details Elements
         overview: 'The First Hero is the final project I made for my first year of university.\n\nThe objective is to progress through the dungeon, fighting enemies and obtaining new weapons ' +
@@ -17,7 +17,7 @@ const myProjects = [
             'and implementing these mechanics in an efficient and dynamic way.',
         overviewVideo: `https://www.youtube.com/embed/kphWFrlb76Q?autoplay=1&mute=1&loop=1&playlist=kphWFrlb76Q&modestbranding=1&rel=0&showinfo-0`,
         mechanic1Name: 'Combat System',
-        mechanic1Images: [`${import.meta.env.BASE_URL}/images/social-preview.png`, `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`],
+        mechanic1Images: [`/images/social-preview.png`, `/images/projects/TheFirstHeroImg.png`],
         mechanic1Showcase: 'https://www.youtube.com/embed/kphWFrlb76Q?autoplay=1&mute=1&loop=1&playlist=kphWFrlb76Q&modestbranding=1&rel=0&showinfo-0',
         mechanic2Name: '',
         mechanic2Images: [''],
@@ -33,7 +33,7 @@ const myProjects = [
         role: 'Solo Programmer',
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
-        image: `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`,
+        image: `/images/projects/TheFirstHeroImg.png`,
 
         //Project Details Elements
         overview: 'Test 2',
@@ -55,7 +55,7 @@ const myProjects = [
         role: 'Solo Programmer',
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
-        image: `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`,
+        image: `/images/projects/TheFirstHeroImg.png`,
 
         //Project Details Elements
         overview: '',
@@ -77,7 +77,7 @@ const myProjects = [
         role: 'Solo Programmer',
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
-        image: `${import.meta.env.BASE_URL}/images/projects/TheFirstHeroImg.png`,
+        image: `/images/projects/TheFirstHeroImg.png`,
 
         //Project Details Elements
         overview: '',
