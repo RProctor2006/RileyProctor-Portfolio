@@ -2,6 +2,14 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+    --color-darkbg: oklch(0.3329 0 0);
+    --color-darkbgsec: oklch(0.3979 0 0);
+    --color-darkbglight: oklch(0.7292 0.0011 17.19);
+    --color-darklight: oklch(0.6003 0.2315 11.08);
+    --color-darklightsec: oklch(0.6081 0.1588 2.62);
+}
+
 @font-face {
     font-family: 'Inter';
     font-style: normal;
@@ -18,9 +26,15 @@
     font-display: swap;
 }
 
+
 body {
     caret-color: transparent;
     font-family: "Inter", serif;
+}
+
+.slick-dots li button:before {
+    padding-top: 25px;
+    font-size: 12px
 }
 
 .dark .slick-dots li button:before {

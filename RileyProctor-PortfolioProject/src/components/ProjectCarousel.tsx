@@ -99,28 +99,32 @@ const ProjectCarousel = ({ projects }: Props) => {
 
     {/* Main Carousel Section */}
     return (
-        <div className="my-12 px-4 md:px-8">
+        <div className="my-8 px-4 md:px-8 ">
             <Slider {...settings}>
                 {projects.map((project, i) => (
                     <div key={i} className="px-4 transition-transform overflow-visible duration-300">
                         <div
-                            className={`bg-white p-4 rounded-lg shadow-md transform outline-solid dark:outline-black ${i === activeSlide ? 'scale-97 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
+                            className={`bg-white p-4 rounded-lg shadow-xl dark:shadow-darklight/50 transform outline-solid dark:bg-darkbgsec dark:outline-darklight ${i === activeSlide ? 'scale-97 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
                             {/* Display Project Variables */}
                             <img src={project.image} alt={project.title}
                                  className={`w-full mx-auto aspect-square object-cover rounded-lg`}/>
 
-                            <h3 className="text-lg font-bold mt-4">{project.title}</h3>
-                            <div className="text-sm text-gray-700 font-medium">
-                                <span className="font-bold">Role:</span> {project.role}
+                            <h3 className="text-lg font-bold mt-4 dark:text-darklightsec">{project.title}</h3>
+
+                            <div className="text-gray-700 dark:text-gray-300">
+                                <div className="text-sm font-medium">
+                                    <span className="font-bold">Role:</span> {project.role}
+                                </div>
+                                <div className="text-sm">
+                                    <span className="font-bold">Languages Used:</span> {project.languagesUsed}
+                                </div>
+                                <p className=" mt-2">{project.description}</p>
                             </div>
-                            <div className="text-sm text-gray-700">
-                                <span className="font-bold">Languages Used:</span> {project.languagesUsed}
-                            </div>
-                            <p className="text-gray-600 mt-2">{project.description}</p>
+                            
 
                             {!showDetails && i === activeSlide && (
                                 <button
-                                    className="mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                                    className="mt-3 px-4 py-2 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-darkbglight hover:text-black transition-colors duration-200"
                                     onClick={() => setDetailsIndex(i)}
                                 >
                                     View Project
@@ -133,7 +137,7 @@ const ProjectCarousel = ({ projects }: Props) => {
 
 
             {detailsIndex !== null && (
-                <div className="mt-12">
+                <div className="mt-18">
                     <ProjectDetails
                         title={projects[detailsIndex].title}
                         overview={projects[detailsIndex].overview}

@@ -16,7 +16,7 @@ const ToggleThemeButton = () => {
     return (
         <button
             onClick={() => setIsDark(!isDark)}
-            className="px-3 py-1 border rounded-lg bg-gray-900 text-white dark:bg-gray-300 dark:text-black"
+            className="px-3 py-1 border rounded-lg bg-darkbg text-white dark:bg-gray-300 dark:text-black"
         >
             {isDark ? 'Light Mode' : 'Dark Mode'}
         </button>
