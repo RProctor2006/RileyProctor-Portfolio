@@ -91,18 +91,18 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     
     
     return (
-        <div className="mt-10 max-w-5xl outline-solid mx-auto bg-white dark:bg-darkbgsec dark:shadow-darklight/50 dark:outline-darklight p-6 rounded-2xl shadow-xl transition-all duration-300">
+        <div className="mt-10 max-w-5xl outline-solid mx-auto bg-white outline-lightacc2 shadow-lightacc2/50 dark:bg-darkbgsec dark:shadow-darkbglight/50 dark:outline-darkbglight p-6 rounded-2xl shadow-xl transition-all duration-300">
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-3xl font-bold dark:text-darklightsec">{title}</h2>
+                <h2 className="text-3xl font-bold dark:text-white">{title}</h2>
                 <button onClick={onClose} className="text-sm px-3 py-1 rounded bg-red-500 text-white hover:bg-red-600 transition">Close</button>
             </div>
             
             <div className="flex space-x-4 border-b pb-2 mb-4">
                 {(['Overview', 'Mechanics', 'Media', 'Challenges'] as Tab[]).map(tab => (
-                    <button key={tab} className={`pb-2 font-medium transition 
+                    <button key={tab} className={`pb-2 font-bold transition cursor-pointer 
                     ${activeTab === tab 
-                        ? 'border-b-2 border-darklightsec text-darklightsec' 
-                        : 'text-gray-400 hover:text-darklight'
+                        ? 'border-b-2 border-darklightsec text-black dark:text-white' 
+                        : 'text-gray-400 hover:text-lightbutton dark:hover:text-darklightsec'
                     }`}
                     onClick={() => setActiveTab(tab)}>{tab}</button>
                 ))}

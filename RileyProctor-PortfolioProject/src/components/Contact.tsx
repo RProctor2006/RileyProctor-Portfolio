@@ -3,21 +3,21 @@ import { FaGithub, FaLinkedin, FaItchIo, FaEnvelope } from 'react-icons/fa'
 
 const Contact = () => {
     return (
-        <section id="contact" className="bg-gray-900 dark:bg-darkbgsec dark:rounded-xl dark:outline-solid dark:outline-darklightsec text-white py-19 max-w-225 mx-auto min-h-[89vh] text-center">
-            <h2 className="text-5xl font-bold mb-10 dark:text-darklightsec">Contact Me</h2>
+        <section id="contact" className="bg-gray-900 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl dark:bg-darkbgsec dark:shadow-darkbglight/50  dark:outline-darkbglight text-white py-19 max-w-225 mx-auto min-h-[89vh] text-center">
+            <h2 className="text-5xl font-bold mb-10 dark:text-white">Contact Me</h2>
 
             {/* Social Icons */}
             <div className="flex justify-center gap-8 mb-10">
-                <a href="https://github.com/RProctor2006" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-darklight">
+                <a href="https://github.com/RProctor2006" target="_blank" rel="noopener noreferrer" className="text-4xl dark:hover:text-darklight hover:text-lightacc1">
                     <FaGithub />
                 </a>
-                <a href="https://linkedin.com/in/riley-proctor" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-darklight">
+                <a href="https://linkedin.com/in/riley-proctor" target="_blank" rel="noopener noreferrer" className="text-4xl dark:hover:text-darklight hover:text-lightacc1">
                     <FaLinkedin />
                 </a>
-                <a href="https://riley-proctor.itch.io" target="_blank" rel="noopener noreferrer" className="text-4xl hover:text-darklight">
+                <a href="https://riley-proctor.itch.io" target="_blank" rel="noopener noreferrer" className="text-4xl dark:hover:text-darklight hover:text-lightacc1">
                     <FaItchIo />
                 </a>
-                <a href="mailto:rileypgames06@gmail.com" className="text-4xl hover:text-darklight">
+                <a href="mailto:rileypgames06@gmail.com" className="text-4xl dark:hover:text-darklight hover:text-lightacc1">
                     <FaEnvelope />
                 </a>
             </div>
@@ -34,7 +34,7 @@ const Contact = () => {
                 <div className="w-full px-4 py-2 rounded bg-gray-800 dark:bg-darkbg border border-gray-700 focus:outline-none focus:ring-blue-500 overflow-hidden">
                     <textarea name="message" placeholder="Your Message" rows={5} className="w-full text-white placeholder-gray-400 bg-transparent outline-none caret-auto"></textarea>
                 </div>
-                <button type="submit" className="w-full bg-blue-600 dark:bg-darkbg hover:bg-blue-700 dark:hover:bg-darkbglight dark:hover:text-black transition-colors text-white font-semibold py-2 px-4 rounded">Send Message</button>
+                <button type="submit" className="w-full bg-blue-600 hover:bg-lightbutton hover:text-black dark:bg-darkbg hover:bg-blue-700 dark:hover:bg-darklightsec dark:hover:text-white transition-colors text-white font-semibold py-2 px-4 rounded">Send Message</button>
             </form>
 
             {/* Footer */}

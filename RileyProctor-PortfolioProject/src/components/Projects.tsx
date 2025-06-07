@@ -98,7 +98,7 @@ const myProjects = [
 const Projects = () => {
     return (
         <section id="projects" className=" max-w-6xl mx-auto px-6 pt-12 pb-20 min-w-325">
-            <h2 className="text-4xl font-bold mb-8 dark:text-darklightsec">Projects</h2>
+            <h2 className="text-4xl font-bold mb-8 dark:text-white">Projects</h2>
             {/* Project Carousel */}
             <section id="projects-carousel" className="px-4 md:px-12">
                 <ProjectCarousel projects={myProjects} />
