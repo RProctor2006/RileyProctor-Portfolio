@@ -3,11 +3,19 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-darkbg: oklch(0.3329 0 0);
+    --color-darkbg: oklch(0.1591 0 0);
     --color-darkbgsec: oklch(0.3979 0 0);
-    --color-darkbglight: oklch(0.7292 0.0011 17.19);
-    --color-darklight: oklch(0.6003 0.2315 11.08);
-    --color-darklightsec: oklch(0.6081 0.1588 2.62);
+    --color-darkbglight: oklch(0.652 0.1901 253.21);
+    --color-darklight: oklch(0.8758 0.2303 152.02);
+    --color-darklightsec: oklch(0.6533 0.2684 354.75);
+}
+
+@theme {
+    --color-lightbg: oklch(1 0 0);
+    --color-lighttext: oklch(0.1591 0 0);
+    --color-lightacc1: oklch(0.7206 0.178066 155.0196);
+    --color-lightacc2: oklch(0.5888 0.1844 253.5);
+    --color-lightbutton: oklch(0.597 0.240854 2.4025);
 }
 
 @font-face {
@@ -33,7 +41,6 @@ body {
 }
 
 .slick-dots li button:before {
-    padding-top: 25px;
     font-size: 12px
 }
 
