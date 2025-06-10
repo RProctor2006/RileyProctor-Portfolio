@@ -54,26 +54,29 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                 return (
                     <div>
                         <h1 className="text-left text-2xl pb-5">{mechanic1Name}:</h1>
+                        <div className="flex items-start">
+                            <div className="mb-4 space-y-4">
+                                <iframe
+                                    className="rounded-lg shadow-lg w-[375px] h-[210.75px]"
+                                    src={mechanic1Showcase}
+                                    frameBorder="0"
+                                    allow="autoplay; clipboard-write; encrypyed-media; gyroscope; picture-in-picture"
+                                ></iframe>
 
-                        <div className="mb-4">
-                            <iframe
-                                className="rounded-lg shadow-lg w-[375px] h-[210.75px]"
-                                src={mechanic1Showcase}
-                                frameBorder="0"
-                                allow="autoplay; clipboard-write; encrypyed-media; gyroscope; picture-in-picture"
-                            ></iframe>
-                        </div>
-                        <div className="space-y-4">
-                            {mechanic1Images.map((src, index) => (
-                                <img
-                                    key={index}
-                                    src={src}
-                                    className="w-94 h-auto rounded-lg shadow-md"
-                                />
-                            ))}
+                                {mechanic1Images.map((src, index) => (
+                                    <img
+                                        key={index}
+                                        src={src}
+                                        className="w-94 h-auto rounded-lg shadow-md"
+                                    />
+                                ))}
+                            </div>
+                            <div className="flex-1 text-left px-8">
+                                <p>test text</p>
+                            </div>
                         </div>
                     </div>
-                );    
+                );
 
             case 'Media':
                 return (
@@ -83,15 +86,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         ))}
                     </div>
                 );
-                
+
             case 'Challenges':
                 return <p className="text-left text-gray-700">{challenges}</p>;
         }
     };
-    
-    
+
+
     return (
-        <div className="mt-10 max-w-5xl outline-solid mx-auto bg-white outline-lightacc2 shadow-lightacc2/50 dark:bg-darkbgsec dark:shadow-darkbglight/50 dark:outline-darkbglight p-6 rounded-2xl shadow-xl transition-all duration-300">
+        <div
+            className="mt-10 max-w-5xl outline-solid mx-auto bg-white outline-lightacc2 shadow-lightacc2/50 dark:bg-darkbgsec dark:shadow-darkbglight/50 dark:outline-darkbglight p-6 rounded-2xl shadow-xl transition-all duration-300">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-3xl font-bold dark:text-white">{title}</h2>
                 <button onClick={onClose} className="text-sm px-3 py-1 rounded bg-red-500 text-white hover:bg-red-600 transition">Close</button>
