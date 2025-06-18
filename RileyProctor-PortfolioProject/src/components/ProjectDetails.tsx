@@ -1,6 +1,7 @@
 ﻿import { useState } from 'react';
+import FullScreenImage from './ImageModal'
 
-type Tab = 'Overview' | 'Mechanics' | 'Media' | 'Challenges';
+type Tab = 'Overview' | 'Mechanics' | 'Media';
 
 interface ProjectDetailsProps {
     title: string;
@@ -13,7 +14,6 @@ interface ProjectDetailsProps {
     mechanic2Images: string[];
     mechanic2Showcase: string;
     media: string[]; //Urls to images or video embeds
-    challenges: string;
     onClose: () => void;
 }
 
@@ -28,7 +28,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
     mechanic2Images,
     mechanic2Showcase,
     media,
-    challenges,
     onClose
 }) => {
     const [activeTab, setActiveTab] = useState<Tab>('Overview');
@@ -41,8 +40,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         <iframe
                             className="float-left mr-4 rounded-lg shadow-lg w-[500px] h-[281px]"
                             src={overviewVideo}
-                            frameBorder="0"
-                            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            loading="lazy"
+                            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen;"
                         ></iframe>
                         <div>
                             <p className="whitespace-pre-line flex-1 text-left text-gray-700 dark:text-gray-300">{overview}</p>
@@ -57,17 +56,17 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         <div className="flex items-start">
                             <div className="mb-4 space-y-4">
                                 <iframe
-                                    className="rounded-lg shadow-lg w-[375px] h-[210.75px]"
+                                    className="rounded-lg shadow-lg w-[550px] h-[309px]"
                                     src={mechanic1Showcase}
-                                    frameBorder="0"
-                                    allow="autoplay; clipboard-write; encrypyed-media; gyroscope; picture-in-picture"
+                                    loading="lazy"
+                                    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen;"
                                 ></iframe>
 
                                 {mechanic1Images.map((src, index) => (
-                                    <img
+                                    <FullScreenImage
                                         key={index}
                                         src={src}
-                                        className="w-94 h-auto rounded-lg shadow-md"
+                                        className="w-[550px] h-auto rounded-lg shadow-md"
                                     />
                                 ))}
                             </div>
@@ -86,9 +85,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
                         ))}
                     </div>
                 );
-
-            case 'Challenges':
-                return <p className="text-left text-gray-700">{challenges}</p>;
         }
     };
 
@@ -102,7 +98,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
             </div>
             
             <div className="flex space-x-4 border-b pb-2 mb-4">
-                {(['Overview', 'Mechanics', 'Media', 'Challenges'] as Tab[]).map(tab => (
+                {(['Overview', 'Mechanics', 'Media'] as Tab[]).map(tab => (
                     <button key={tab} className={`pb-2 font-bold transition cursor-pointer 
                     ${activeTab === tab 
                         ? 'border-b-2 border-darklightsec text-black dark:text-white' 
