@@ -149,7 +149,6 @@ const ProjectCarousel = ({ projects }: Props) => {
                         mechanic2Images={projects[detailsIndex].mechanic2Images}
                         mechanic2Showcase={projects[detailsIndex].mechanic2Showcase}
                         media={projects[detailsIndex].media}
-                        challenges={projects[detailsIndex].challenges}
                         onClose={() => setDetailsIndex(null)}
                     />
                 </div>

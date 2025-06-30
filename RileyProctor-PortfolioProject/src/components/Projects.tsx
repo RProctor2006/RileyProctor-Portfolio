@@ -29,11 +29,11 @@ const myProjects = [
     },
     {
         //Card Elements
-        title: 'The First Hero',
+        title: 'Pixel Brawl',
         role: 'Solo Programmer',
-        languagesUsed: 'Unreal Engine Blueprints',
-        description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
-        image: `/images/projects/TheFirstHeroImg.png`,
+        languagesUsed: 'Unity C#',
+        description: 'Fight through unique enemies on a deadly island arena! Can you survive and triumph over these foes?',
+        image: `/images/projects/PixelBrawl_Thumbnail.png`,
 
         //Project Details Elements
         overview: 'Test 2',
@@ -51,11 +51,11 @@ const myProjects = [
     },
     {
         //Card Elements
-        title: 'The First Hero',
+        title: 'Pokémon Battle Simulation',
         role: 'Solo Programmer',
-        languagesUsed: 'Unreal Engine Blueprints',
-        description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
-        image: `/images/projects/TheFirstHeroImg.png`,
+        languagesUsed: 'Raw C++',
+        description: "A recreation of Pokémon's complex combat system! Includes all the extra effects in battle. Programmed efficiently and cleanly.",
+        image: `/images/projects/PokemonBattle_Thumbnail.png`,
 
         //Project Details Elements
         overview: '',
