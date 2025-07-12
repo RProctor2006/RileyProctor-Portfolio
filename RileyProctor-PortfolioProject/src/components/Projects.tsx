@@ -73,11 +73,11 @@ const myProjects = [
     },
     {
         //Card Elements
-        title: 'The First Hero',
-        role: 'Solo Programmer',
-        languagesUsed: 'Unreal Engine Blueprints',
-        description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
-        image: `/images/projects/TheFirstHeroImg.png`,
+        title: 'Project Clockwork',
+        role: 'Project Lead & Lead Programmer',
+        languagesUsed: 'TBD',
+        description: 'An oppressive government terrorises the nation and destroys communities. This unique action-adventure game with an innovative combat system is in early planning, demo predicted for summer 2026!',
+        image: `/images/projects/ProjectClockwork.png`,
 
         //Project Details Elements
         overview: '',

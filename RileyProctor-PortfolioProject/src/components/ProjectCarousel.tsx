@@ -99,15 +99,15 @@ const ProjectCarousel = ({ projects }: Props) => {
 
     {/* Main Carousel Section */}
     return (
-        <div className="my-8 px-4 md:px-8 ">
+        <div className="my-8 px-4 ">
             <Slider {...settings}>
                 {projects.map((project, i) => (
                     <div key={i} className="px-4 transition-transform relative pb-16 overflow-visible duration-300">
                         <div
-                            className={`bg-white p-4 rounded-lg shadow-xl transform outline-solid outline-lightacc2 shadow-lightacc2/50 dark:shadow-darkbglight/50 dark:bg-darkbgsec dark:outline-darkbglight ${i === activeSlide ? 'scale-97 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
+                            className={`bg-white p-4 lg:h-auto md:h-133 flex flex-col justify-start rounded-lg shadow-xl transform outline-solid outline-lightacc2 shadow-lightacc2/50 dark:shadow-darkbglight/50 dark:bg-darkbgsec dark:outline-darkbglight ${i === activeSlide ? 'scale-97 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
                             {/* Display Project Variables */}
                             <img src={project.image} alt={project.title}
-                                 className={`w-full mx-auto aspect-square object-cover rounded-lg`}/>
+                                 className={`lg:w-full mx-auto aspect-square md:w-55 object-cover rounded-lg`}/>
 
                             <h3 className="text-lg font-bold mt-4 text-lightacc1 dark:text-darklight">{project.title}</h3>
 
@@ -124,7 +124,7 @@ const ProjectCarousel = ({ projects }: Props) => {
 
                             {!showDetails && i === activeSlide && (
                                 <button
-                                    className="mt-3 px-4 py-2 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
+                                    className="my-auto px-4 py-2 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
                                     onClick={() => setDetailsIndex(i)}
                                 >
                                     View Project

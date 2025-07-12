@@ -3,6 +3,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1600px;
+}
+
+@theme {
     --color-darkbg: oklch(0.1591 0 0);
     --color-darkbgsec: oklch(0.3979 0 0);
     --color-darkbglight: oklch(0.652 0.1901 253.21);
