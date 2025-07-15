@@ -11,7 +11,7 @@ import Contact from './components/Contact'
 function App() {
     
     return (
-        <div id="root" className="max-w-screen mx-auto p-8 text-center bg-white text-black dark:bg-darkbg dark:text-white">
+        <div id="root" className="min-w-screen mx-auto p-8 text-center bg-white text-black dark:bg-darkbg dark:text-white">
             <Navbar />
             <main className="">
                 <Hero />

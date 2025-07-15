@@ -104,7 +104,7 @@ const ProjectCarousel = ({ projects }: Props) => {
                 {projects.map((project, i) => (
                     <div key={i} className="px-4 transition-transform relative pb-16 overflow-visible duration-300">
                         <div
-                            className={`bg-white p-4 lg:h-auto md:h-133 flex flex-col justify-start rounded-lg shadow-xl transform outline-solid outline-lightacc2 shadow-lightacc2/50 dark:shadow-darkbglight/50 dark:bg-darkbgsec dark:outline-darkbglight ${i === activeSlide ? 'scale-97 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
+                            className={`bg-white p-4 sm:h-50 sm:w-25 md:h-133 md:w-auto lg:h-auto flex flex-col justify-start rounded-lg shadow-xl transform outline-solid outline-lightacc2 shadow-lightacc2/50 dark:shadow-darkbglight/50 dark:bg-darkbgsec dark:outline-darkbglight ${i === activeSlide ? 'scale-97 shadow-2xl z-10' : 'scale-93 opacity-70'}`}>
                             {/* Display Project Variables */}
                             <img src={project.image} alt={project.title}
                                  className={`lg:w-full mx-auto aspect-square md:w-55 object-cover rounded-lg`}/>
