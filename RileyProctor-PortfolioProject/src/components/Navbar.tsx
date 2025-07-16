@@ -2,7 +2,6 @@
 import { Link, scrollSpy } from 'react-scroll'
 import { useEffect } from 'react'
 
-import ThemeSwitchButton from "./ThemeSwitchButton.tsx";
 import BurgerMenu from "./BurgerMenu.tsx";
 
 
@@ -16,11 +15,10 @@ const Navbar = () => {
 
     return (
         <nav
-            className="fixed sm:w-dvw sm:text-sm top-0 left-0 right-0 bg-lightacc1/80 backdrop-blur-md shadow-md z-50 text-lighttext dark:bg-darklight/80 dark:text-white dark:shadow-xl/30">
-            <div className="max-w-6xl mx-auto  py-4 flex justify-between items-center">
+            className="fixed sm:w-dvw sm:text-sm sm:pr-6 sm:pl-2 top-0 left-0 right-0 bg-lightacc1/80 backdrop-blur-md shadow-md z-50 text-lighttext dark:bg-darklight/80 dark:text-white dark:shadow-xl/30">
+            <div className="max-w-6xl mx-auto py-4 flex flex-row items-center justify-between sm:gap-6 md:gap-8">
                 <div className="sm:text-sm md:text-2xl font-bold">Riley Proctor │ Gameplay Programmer</div>
-                <ThemeSwitchButton/>
-
+                
                 {/*If device viewport is larger than phone size, then display headings in navbar*/}
                 {window.innerWidth > 768 ? (
                     <ul className="sm:text-sm flex flex-row gap-8 text-gray-700 font-medium md:text-xl dark:text-gray-300 dark:shadow-white">
