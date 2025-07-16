@@ -7,17 +7,17 @@ const BurgerMenu = () => {
     const [isPressed, setIsPressed] = useState(false);
     
     return (
-        <div>
+        <div className="flex flex-col items-center">
             <button
                 onClick={() => setIsPressed(!isPressed)}
             >
-                <FaBars className="w-15 h-15"/>
+                <FaBars className="w-11 h-11"/>
             </button>
 
             {isPressed && (
                 <div
-                    className="h-fit py-1 px-3 absolute mt-2 mx-auto bg-white dark:bg-gray-900 shadow-lg z-50 text-black dark:text-white">
-                    <ul className="sm:text-sm flex flex-col gap-8 text-gray-700 font-medium md:text-xl dark:text-gray-300 dark:shadow-white">
+                    className="h-fit py-1 px-3 absolute mt-12 bg-white dark:bg-gray-900 shadow-lg z-50 text-black dark:text-white">
+                    <ul className="sm:text-sm flex flex-col gap-4 text-gray-700 font-medium md:text-xl dark:text-gray-300 dark:shadow-white">
                         <li><Link to="home" smooth={true} duration={500} spy={true} offset={-80}
                                   activeClass="font-semibold"
                                   className="hover:text-darklightsec cursor-pointer transition-colors duration-300">Home</Link>
