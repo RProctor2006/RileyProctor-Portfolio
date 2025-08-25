@@ -1,0 +1,52 @@
+{
+  "hash": "d93179c3",
+  "configHash": "ef499434",
+  "lockfileHash": "f5b63691",
+  "browserHash": "9b43f55b",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "ee143f0b",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "07e6f8c7",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "6c531543",
+      "needsInterop": true
+    },
+    "react-scroll": {
+      "src": "../../node_modules/react-scroll/modules/index.js",
+      "file": "react-scroll.js",
+      "fileHash": "94c86df4",
+      "needsInterop": true
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "b8c8a343",
+      "needsInterop": false
+    },
+    "react-slick": {
+      "src": "../../node_modules/react-slick/lib/index.js",
+      "file": "react-slick.js",
+      "fileHash": "b0a607f2",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-ELNDXDY2": {
+      "file": "chunk-ELNDXDY2.js"
+    },
+    "chunk-UCCAB3TN": {
+      "file": "chunk-UCCAB3TN.js"
+    }
+  }
+}
