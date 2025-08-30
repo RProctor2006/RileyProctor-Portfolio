@@ -1,12 +1,12 @@
 ﻿//import React, 
 import { useState } from 'react'
 import Slider from 'react-slick'
+import { Link } from "react-router-dom";
 
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import ProjectDetails from "./ProjectDetails.tsx";
 
 
 {/* Project Template */}
@@ -17,20 +17,7 @@ type Project = {
     languagesUsed: string;
     description: string;
     image: string;
-
-    //Tab elements
-    overview: string;
-    overviewVideo: string;
-    
-    mechanic1Name: string;
-    mechanic1Images: string[];
-    mechanic1Showcase: string;
-    mechanic2Name: string;
-    mechanic2Images: string[];
-    mechanic2Showcase: string;
-    
-    media: string[];
-    challenges: string;
+    pageLink: string;
     
     projectLink: string;
 };
@@ -123,36 +110,18 @@ const ProjectCarousel = ({ projects }: Props) => {
                             
 
                             {!showDetails && i === activeSlide && (
-                                <button
-                                    className="my-auto px-4 py-2 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
-                                    onClick={() => setDetailsIndex(i)}
-                                >
-                                    View Project
-                                </button>
+                                <Link to={project.pageLink}>
+                                    <button
+                                        className="my-auto px-4 py-2 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
+                                    >
+                                        View Project
+                                    </button>
+                                </Link>
                             )}
                         </div>
                     </div>
                 ))}
             </Slider>
-
-
-            {detailsIndex !== null && (
-                <div className="mt-18">
-                    <ProjectDetails
-                        title={projects[detailsIndex].title}
-                        overview={projects[detailsIndex].overview}
-                        overviewVideo={projects[detailsIndex].overviewVideo}
-                        mechanic1Name={projects[detailsIndex].mechanic1Name}
-                        mechanic1Images={projects[detailsIndex].mechanic1Images}
-                        mechanic1Showcase={projects[detailsIndex].mechanic1Showcase}
-                        mechanic2Name={projects[detailsIndex].mechanic2Name}
-                        mechanic2Images={projects[detailsIndex].mechanic2Images}
-                        mechanic2Showcase={projects[detailsIndex].mechanic2Showcase}
-                        media={projects[detailsIndex].media}
-                        onClose={() => setDetailsIndex(null)}
-                    />
-                </div>
-            )}
         </div>
     );
 };
