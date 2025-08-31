@@ -122,7 +122,7 @@ const ProjectCarousel = ({ projects }: Props) => {
                     </div>
                 ))}
             </Slider>
-        </div>
+        </div> 
     );
 };
 
