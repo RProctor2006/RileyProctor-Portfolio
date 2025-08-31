@@ -15,7 +15,7 @@ function HomePage() {
             <Navbar />
             <div className="fixed right-0 bottom-0 p-3"> <ThemeSwitchButton/> </div>
             
-            <main className="">
+            <main>
                 <Hero />
                 <Projects />
                 <About />
