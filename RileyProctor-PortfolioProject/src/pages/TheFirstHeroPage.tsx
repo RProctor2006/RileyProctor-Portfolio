@@ -14,7 +14,7 @@ function TheFirstHeroPage() {
                 </div>
 
                 {/*Image Pic (Replace with gif or video) */}
-                <img className="h-130" src="/images/projects/TFH/TFHPagePhoto.png" alt="Project Image" />
+                <img className="md:size-1/1 lg:h-130" src="/images/projects/TFH/TFHPagePhoto.png" alt="Project Image" />
             </div>
              
                 
@@ -43,12 +43,12 @@ function TheFirstHeroPage() {
                 </div>
 
                 {/*Combat System Section*/}
-                <div className="pt-10 flex-col justify-items-start">
-                    <h1 className="text-3xl ">Combat System</h1>
+                <div className="pt-14 flex-col justify-items-start">
+                    <h1 className="text-4xl ">Combat System</h1>
 
                     {/*Animation Montages Section*/}
-                    <div className="flex flex-row pt-4">
-                        <img className="h-85" src="/images/placeholders/TFH_AnimNotifs_Placeholder.png" alt="TFH_AnimNotifs Placeholder" />
+                    <div className="flex md:flex-col lg:flex-row pt-12">
+                        <img className="md:size-9/12 md:mx-auto lg:h-85 mb-4" src="/images/placeholders/TFH_AnimNotifs_Placeholder.png" alt="TFH_AnimNotifs Placeholder" />
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Animation Montages</h1>
@@ -61,8 +61,8 @@ function TheFirstHeroPage() {
                     </div>
 
                     {/*Lock On Section*/}
-                    <div className="flex flex-row pt-10">
-                        <img className="h-85" src="/images/projects/TFH/TFH_LockOnFlowchart.png" alt="TFH_AnimNotifs Placeholder" />
+                    <div className="flex md:flex-col lg:flex-row pt-10">
+                        <img className="md:size-9/12 lg:h-85 md:mx-auto mb-4" src="/images/projects/TFH/TFH_LockOnFlowchart.png" alt="TFH_AnimNotifs Placeholder" />
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Lock On System</h1>
@@ -78,8 +78,8 @@ function TheFirstHeroPage() {
                     </div>
 
                     {/*Component Section*/}
-                    <div className="flex flex-row pt-10">
-                        <img className="h-85" src="/images/placeholders/TFH_CombatComp_Placeholder.png" alt="TFH_Component Placeholder" />
+                    <div className="flex md:flex-col lg:flex-row pt-10">
+                        <img className="md:size-9/12 lg:h-85 md:mx-auto pb-4" src="/images/placeholders/TFH_CombatComp_Placeholder.png" alt="TFH_Component Placeholder" />
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Combat Component</h1>
