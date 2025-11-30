@@ -57,13 +57,31 @@ const Navbar = () => {
                                 </RouterLink>
                             )}
                         </li>
-                        <li><ScrollLink to="about" smooth={true} duration={500} spy={true} offset={-80}
-                                  activeClass="font-semibold"
-                                  className="hover:text-darklightsec cursor-pointer transition-colors duration-300">About</ScrollLink>
+                        <li>
+                            {onHome ? (
+                                <ScrollLink to="about" smooth={true} duration={500} spy={true} offset={-80}
+                                            activeClass="font-semibold"
+                                            className="hover:text-darklightsec cursor-pointer transition-colors duration-300">
+                                    About
+                                </ScrollLink>
+                            ) : (
+                                <RouterLink to="/#about">
+                                    About
+                                </RouterLink>
+                            )}
                         </li>
-                        <li><ScrollLink to="contact" smooth={true} duration={500} spy={true} offset={-80}
-                                  activeClass="font-semibold"
-                                  className="hover:text-darklightsec cursor-pointer transition-colors duration-300">Contact</ScrollLink>
+                        <li>
+                            {onHome ? (
+                                <ScrollLink to="contact" smooth={true} duration={500} spy={true} offset={-80}
+                                            activeClass="font-semibold"
+                                            className="hover:text-darklightsec cursor-pointer transition-colors duration-300">
+                                    Contact
+                                </ScrollLink>
+                            ) : (
+                                <RouterLink to="/#contact">
+                                    Contact
+                                </RouterLink>
+                            )}
                         </li>
                     </ul>
                 ) : (
