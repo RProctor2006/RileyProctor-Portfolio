@@ -1,12 +1,13 @@
 
 //Site Components
 import Navbar from './components/Navbar';
-import HomePage from './pages/HomePage.tsx'
-
 import ThemeSwitchButton from "./components/ThemeSwitchButton.tsx";
+
+//Import Pages
+import HomePage from './pages/HomePage.tsx'
 import TheFirstHeroPage from "./pages/TheFirstHeroPage.tsx";
 
-//import React from 'react';
+//import essentials
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
             <Navbar />
             <div className="fixed right-0 bottom-0 p-3"> <ThemeSwitchButton/> </div>
 
-            {/*Routes*/}
+            {/*Page Routes*/}
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/TheFirstHero" element={<TheFirstHeroPage />} />
