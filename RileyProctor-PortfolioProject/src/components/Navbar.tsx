@@ -1,12 +1,15 @@
 ﻿//import React from 'react'
-import { Link as ScrollLink, scrollSpy } from 'react-scroll'
-import { Link as RouterLink } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Link as ScrollLink, scrollSpy } from 'react-scroll';
+import { Link as RouterLink, useLocation} from 'react-router-dom';
+import { useEffect } from 'react';
 
 import BurgerMenu from "./BurgerMenu.tsx";
 
 const Navbar = () => {
 
+    const location = useLocation(); //Current location of the user
+    const onHome = location.pathname === '/';
+    
     //Updates the navbar link on start
     useEffect(() => {
         scrollSpy.update();
@@ -28,13 +31,31 @@ const Navbar = () => {
                 {/*If device viewport is larger than phone size, then display headings in navbar*/}
                 {window.innerWidth > 768 ? (
                     <ul className="sm:text-sm flex flex-row gap-8 text-gray-700 font-bold md:text-xl dark:text-gray-300 dark:shadow-white">
-                        <li><ScrollLink to="home" smooth={true} duration={500} spy={true} offset={-80}
-                                  activeClass="font-semibold"
-                                  className="hover:text-darklightsec cursor-pointer transition-colors duration-300">Home</ScrollLink>
+                        <li>
+                            {onHome ? (
+                                <ScrollLink to="home" smooth={true} duration={500} spy={true} offset={-80}
+                                            activeClass="font-semibold"
+                                            className="hover:text-darklightsec cursor-pointer transition-colors duration-300">
+                                    Home
+                                </ScrollLink>
+                            ) : (
+                                <RouterLink to="/#home">
+                                    Home
+                                </RouterLink>
+                            )}
                         </li>
-                        <li><ScrollLink to="projects" smooth={true} duration={500} spy={true} offset={-80}
-                                  activeClass="font-semibold"
-                                  className="hover:text-darklightsec cursor-pointer transition-colors duration-300">Projects</ScrollLink>
+                        <li>
+                            {onHome ? (
+                                <ScrollLink to="projects" smooth={true} duration={500} spy={true} offset={-80}
+                                            activeClass="font-semibold"
+                                            className="hover:text-darklightsec cursor-pointer transition-colors duration-300">
+                                    Projects
+                                </ScrollLink>
+                            ) : (
+                                <RouterLink to = "/#projects">
+                                    Projects
+                                </RouterLink>
+                            )}
                         </li>
                         <li><ScrollLink to="about" smooth={true} duration={500} spy={true} offset={-80}
                                   activeClass="font-semibold"
