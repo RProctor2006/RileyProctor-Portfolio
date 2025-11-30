@@ -1,12 +1,15 @@
 ﻿//import React from 'react'
 import { Link as ScrollLink, scrollSpy } from 'react-scroll'
-import { Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 
 import BurgerMenu from "./BurgerMenu.tsx";
 
 const Navbar = () => {
 
+    const Location = useLocation();
+    const onHome = Location.pathname === "/";
+    
     //Updates the navbar link on start
     useEffect(() => {
         scrollSpy.update();
