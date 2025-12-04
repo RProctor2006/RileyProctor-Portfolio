@@ -14,7 +14,14 @@ function TheFirstHeroPage() {
                 </div>
 
                 {/*Image Pic (Replace with gif or video) */}
-                <img className="md:size-1/1 lg:h-130" src="/images/projects/TFH/TFHPagePhoto.png" alt="Project Image" />
+                {/*<img className="md:size-1/1 lg:h-130" src="/images/projects/TFH/TFHPagePhoto.png" alt="Project Image" />*/}
+                <video
+                    className = "md:size-1/2 lg:size-full mx-auto"
+                    src = "/videos/theFirstHero/TheFirstHeroShowcase.mp4"
+                    autoPlay={true}
+                    loop={true}
+                    muted={true}
+                ></video>
             </div>
              
                 
@@ -44,7 +51,19 @@ function TheFirstHeroPage() {
 
                 {/*Combat System Section*/}
                 <div className="pt-14 flex-col justify-items-start">
-                    <h1 className="text-4xl ">Combat System</h1>
+
+                    {/*Combat System Showcase*/}
+                    <div className="pt-10 flex-col justify-items-center">
+                        <h1 className="text-4xl pb-6">Combat Showcase</h1>
+                        <video
+                            className = "size-8/12"
+                            src = "/videos/theFirstHero/CombatShowcase.mp4"
+                            autoPlay = {true}
+                            loop = {true}
+                            muted = {true}
+                        >
+                        </video>
+                    </div>
 
                     {/*Animation Montages Section*/}
                     <div className="flex md:flex-col lg:flex-row pt-12">
@@ -91,16 +110,7 @@ function TheFirstHeroPage() {
                         </div>
                     </div>
 
-                    {/*Combat System Showcase*/}
-                    <div className="pt-10 flex-col justify-items-start">
-                        <h1 className="text-3xl">Combat Showcase</h1>
-                        <iframe width="960" height="540"
-                                src="https://www.youtube.com/embed/K8uVbyoCZ8s?si=xHEGanYorwEvBw2u"
-                                title="Combat Showcase Video" frameBorder="0"
-                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen></iframe>
-                    </div>
+                    
                 </div>
 
                 {/*Inventory System Section*/}
