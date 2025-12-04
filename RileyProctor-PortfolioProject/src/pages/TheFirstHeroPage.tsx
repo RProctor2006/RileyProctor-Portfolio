@@ -5,11 +5,23 @@ import Gallery, { type MediaItem } from "../components/Gallery.tsx";
 {/* Essentials */}
 import { Link } from 'react-router-dom'
 
-const galleryItems: MediaItem[] = [
+const lockOnItems: MediaItem[] = [
+    { type: "video", src: "/videos/theFirstHero/LockOnCodeShowcase.mp4" },
     { type: "image", src: "/images/projects/TFH/LockOnBlueprint.png" },
     { type: "image", src: "/images/projects/TFH/LockOnFunctions.png" },
-    { type: "image", src: "/images/projects/TFH/LockOnVariables.png" },
-    { type: "video", src: "/videos/theFirstHero/LockOnCodeShowcase.mp4" }
+    { type: "image", src: "/images/projects/TFH/LockOnVariables.png" }
+]
+
+const combatComponentItems: MediaItem[] = [
+    { type: "video", src: "/videos/theFirstHero/CombatComponentShowcase.mp4" },
+    { type: "image", src: "/images/projects/TFH/AttackingCode.png" },
+    { type: "image", src: "/images/projects/TFH/RollingCode.png" }
+]
+
+const equipmentComponentItems: MediaItem[] = [
+    { type: "image", src: "/images/projects/TFH/EquipmentComponentEventGraph.png" },
+    { type: "image", src: "/images/projects/TFH/InventoryInterface.png" },
+    { type: "image", src: "/images/projects/TFH/AnimVarsInterface.png" }
 ]
 
 function TheFirstHeroPage() {
@@ -19,18 +31,17 @@ function TheFirstHeroPage() {
             {/*Project Intro Section*/}
             <div className="pt-20 flex flex-col max-w-1/2">
                 {/*Go Back Button*/}
-                <div className="flex  pb-2 text-2xl">
+                <div className="flex pb-2  lg:text-2xl">
                     <Link to="/">
                         <button className="justify-start cursor-pointer text-black dark:text-white"> &lt; Go Back</button>
                     </Link>
                     
-                    <h1 className="mx-auto text-4xl">The First Hero</h1>
+                    <h1 className="mx-auto md:text-3xl lg:text-4xl">The First Hero</h1>
                 </div>
 
-                {/*Image Pic (Replace with gif or video) */}
-                {/*<img className="md:size-1/1 lg:h-130" src="/images/projects/TFH/TFHPagePhoto.png" alt="Project Image" />*/}
+                {/* Project Showcase Video */}
                 <video
-                    className = "md:size-1/2 lg:size-full mx-auto"
+                    className = "size-full mx-auto"
                     src = "/videos/theFirstHero/TheFirstHeroShowcase.mp4"
                     autoPlay={true}
                     loop={true}
@@ -70,7 +81,7 @@ function TheFirstHeroPage() {
                     <div className="pt-10 flex-col justify-items-center">
                         <h1 className="text-4xl pb-6">Combat Showcase</h1>
                         <video
-                            className = "size-8/12"
+                            className = "md:size-full lg:size-8/12"
                             src = "/videos/theFirstHero/CombatShowcase.mp4"
                             autoPlay = {true}
                             loop = {true}
@@ -78,17 +89,19 @@ function TheFirstHeroPage() {
                         >
                         </video>
                     </div>
+                    
+                    
 
                     {/*Animation Montages Section*/}
                     <div className="flex md:flex-col lg:flex-row pt-12">
                         {/*<img className="md:size-9/12 md:mx-auto lg:size-8/12" src="/images/projects/TFH/AnimMontageImg.png" alt="TFH_AnimNotifs Placeholder" />*/}
                         <video
-                            className="lg:size-8/12"
+                            className="md:size-10/12 md:mx-auto md:pb-4 lg:size-8/12"
                             src = "/videos/theFirstHero/Animation%20Montages%20Showcase.mp4"
                             autoPlay={true}
                             loop={true}
                         ></video>
-                        <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                        <div className=" md:min-w-8/12 lg:min-w-auto dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Animation Montages</h1>
                                 <p className="text-lg pt-4">I designed the combat system to be animation driven, this revolves around the Animation Montage system
@@ -107,32 +120,42 @@ function TheFirstHeroPage() {
                     <div className="flex md:flex-col lg:flex-row pt-10">
                         {/*<img className="md:size-9/12 lg:h-85 md:mx-auto mb-4" src="/images/projects/TFH/TFH_LockOnFlowchart.png" alt="TFH_AnimNotifs Placeholder" />*/}
 
-                        <Gallery items={galleryItems} width={970} height={420}/>
+                        <Gallery items={lockOnItems}/>
                         
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Lock On System</h1>
                                 <p className="text-lg pt-4">The lock on system is one of the most complex systems in the project. I revisited it often during development
-                                in order to account for new situations. As seen in the flowchart, the way it works is that I fire a sphere trace that detects all the enemies
+                                    in order to account for new situations. </p>
+                                <p className="text-lg pt-4"> Following with the video, the way it works is that I fire a sphere trace that detects all the enemies
                                 in the area. These enemies are then stored in array, after that I create a sphere collision which is attached to the player character, this
                                 will detect any new enemies that enter lock on range, it will check if they are already in the array, if not, they will be added into it. It 
                                 will then ascertain the closest enemy and lock onto them.</p>
-                                <p className="text-lg pt-4">To switch targets, it just finds the next closest enemy in the array and sets them as the new target variable.</p>
-                                
+                                <p className="text-lg pt-4">To switch targets, it just finds the next closest enemy in the array and sets them as the new target variable.
+                                This event is triggered either manually when the player presses the respective keybind or if the current locked on target dies.</p>
+                                <p className="text-lg pt-4">This system follows the SOLID principles for a start, and almost never uses casts to check against classes. This would be detrimental since there a lot of timers 
+                                and frequently running code.</p>
                             </div>
                         </div>
                     </div>
 
                     {/*Component Section*/}
                     <div className="flex md:flex-col lg:flex-row pt-10">
-                        <img className="md:size-9/12 lg:h-85 md:mx-auto pb-4" src="/images/placeholders/TFH_CombatComp_Placeholder.png" alt="TFH_Component Placeholder" />
+                        {/*<img className="md:size-9/12 lg:h-85 md:mx-auto pb-4" src="/images/placeholders/TFH_CombatComp_Placeholder.png" alt="TFH_Component Placeholder" />*/}
+
+                        <Gallery items={combatComponentItems}/>
+                        
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Combat Component</h1>
-                                <p className="text-lg pt-4">The other half of the combat system was done inside a combat component I created. Creating the combat system
-                                in a component allows for me to create a reusable and efficient piece of code that I can add to any character I want and it will work.
-                                This keeps my code clean and effective, as well as making it easier to debug if anything goes wrong! This component works in tandem with 
-                                other components, namely, the health and equipment components I have, which I will explain in further detail later. </p>
+                                <p className="text-lg pt-4">The lock on system and the rest of the combat system is programmed inside this combat component,
+                                    this allows me to keep my combat code separate which allows for easier debug and testing. </p>
+                                <p className="text-lg pt-4">Creating the combat system in a component allows for me to create a reusable and efficient piece of code that I can add to any character I want and it will work.
+                                This keeps my code clean and effective! This component works in tandem with other components all whilst keeping dependencies to a minimum,
+                                    namely, the health and equipment components I made, which I will explain in further detail later. </p>
+                                <p className="text-lg pt-4">In the video you can see the process of the attacking and rolling mechanics which are essential to the complete
+                                combat system. All of the variables and functions are categorised sensibly, and essential variables are exposed so that designers can alter
+                                the functionality of the mechanics to their liking without having to delve into code and look at the inner workings.</p>
                             </div>
                         </div>
                     </div>
@@ -148,7 +171,7 @@ function TheFirstHeroPage() {
                         <h1 className="text-4xl pb-6">Inventory Showcase</h1>
                         <video
                             className = "size-8/12"
-                            src = "/videos/theFirstHero/CombatShowcase.mp4"
+                            src = "/videos/theFirstHero/InventoryShowcase.mp4"
                             autoPlay = {true}
                             loop = {true}
                             muted = {true}
@@ -156,47 +179,46 @@ function TheFirstHeroPage() {
                         </video>
                     </div>
                     
-                    {/*Animation Montages Section*/}
+                    {/* Saving & Loading */}
                     <div className="flex md:flex-col lg:flex-row pt-12">
-                        <img className="md:size-9/12 md:mx-auto lg:h-85 mb-4" src="/images/placeholders/TFH_AnimNotifs_Placeholder.png" alt="TFH_AnimNotifs Placeholder" />
+                        <video
+                            className="md:size-10/12 md:mx-auto md:pb-4 lg:size-8/12"
+                                src = "/videos/theFirstHero/InventorySaveLoad.mp4"
+                            autoPlay={true}
+                            loop={true}
+                        ></video>
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Saving and Loading</h1>
-                                <p className="text-lg pt-4">I designed the combat system to be animation driven, this revolves around the Animation Montage system
-                                    in Unreal Engine. I utilised the animation notify classes in order to trigger certain events. This includes: Activating weapon hitboxes,
-                                    Motion Warping, Invincibility Frames on rolls, Input windows and more!</p>
-                                <p className="text-lg pt-4">This system is ideal as it allows for more natural feeling combat, instead of inconveniencing myself with hard coded timings, I can make dynamic, reusable notify events that I can add to whatever animation montage I require.</p>
+                                <p className="text-lg pt-4">One of the most challenging aspects of the inventory system was saving the positions of items in the
+                                inventory grid, this was an essential quality of life feature. It would feel bad for a player if their items just reset to the 
+                                earliest available slot. Especially with an inventory where a lot of people play differently, some players don't care where their 
+                                items are, whilst on the other hand, some players are very adamant on organising their inventory in specific ways.</p>
+                                <p className="text-lg pt-4">When the player opens the inventory it instantly saves and loads the current inventory grids, there
+                                are 3 separate grids. The main inventory grid, the armour slots, and the weapons slots. You can see in the video, the save system
+                                cycles through all of the grids and for each of their elements that aren't empty, it saves a reference to that object and its grid index
+                                in a map.</p>
+                                <p className="text-lg pt-4">The map takes an integer as the key and a primary data asset as the value, these maps are stored in the
+                                player controller for data persistence when the player opens and closes the inventory.</p>
                             </div>
                         </div>
                     </div>
 
-                    {/*Lock On Section*/}
+                    {/* Equipment Component */}
                     <div className="flex md:flex-col lg:flex-row pt-10">
-                        <img className="md:size-9/12 lg:h-85 md:mx-auto mb-4" src="/images/projects/TFH/TFH_LockOnFlowchart.png" alt="TFH_AnimNotifs Placeholder" />
+                        <Gallery items={equipmentComponentItems}/>
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Equipment Component</h1>
-                                <p className="text-lg pt-4">The lock on system is one of the most complex systems in the project. I revisited it often during development
-                                    in order to account for new situations. As seen in the flowchart, the way it works is that I fire a sphere trace that detects all the enemies
-                                    in the area. These enemies are then stored in array, after that I create a sphere collision which is attached to the player character, this
-                                    will detect any new enemies that enter lock on range, it will check if they are already in the array, if not, they will be added into it. It
-                                    will then ascertain the closest enemy and lock onto them.</p>
-                                <p className="text-lg pt-4">To switch targets, it just finds the next closest enemy in the array and sets them as the new target variable.</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    {/*Component Section*/}
-                    <div className="flex md:flex-col lg:flex-row pt-10">
-                        <img className="md:size-9/12 lg:h-85 md:mx-auto pb-4" src="/images/placeholders/TFH_CombatComp_Placeholder.png" alt="TFH_Component Placeholder" />
-                        <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
-                            <div className="p-4 text-wrap text-left">
-                                <h1 className="text-3xl">Combat Component</h1>
-                                <p className="text-lg pt-4">The other half of the combat system was done inside a combat component I created. Creating the combat system
-                                    in a component allows for me to create a reusable and efficient piece of code that I can add to any character I want and it will work.
-                                    This keeps my code clean and effective, as well as making it easier to debug if anything goes wrong! This component works in tandem with
-                                    other components, namely, the health and equipment components I have, which I will explain in further detail later. </p>
+                                <p className="text-lg pt-4">For all of my components I utilise blueprint interfaces heavily, these allow me to do 2 main things. Get 
+                                references to classes without having to cast, this is best thought about as instead of getting the whole library, you can just get the 
+                                specific book you need. Reason 2 being that it is a great form of blueprint communication, allowing me to call functions from other classes 
+                                without having a complete reference.</p>
+                                <p className="text-lg pt-4">This component is responsible for spawning the characters weapons, handling weapon data, 
+                                communicating with the inventory UI and communicating with the combat components. This component handles the weapon data assets 
+                                which hold the weapon variables needed. Such as mesh, animation montage, damage, etc.</p>
+                                <p className="text-lg pt-4">On the side are my variables and functions, as well as the interface functions. I make it a 
+                                priority to practice clean and neat code and categorisation</p>
                             </div>
                         </div>
                     </div>
