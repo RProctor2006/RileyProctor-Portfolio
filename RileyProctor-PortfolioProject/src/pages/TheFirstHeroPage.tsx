@@ -105,7 +105,7 @@ function TheFirstHeroPage() {
                         <div className="flex md:flex-col lg:flex-row pt-12">
                             {/*<img className="md:size-9/12 md:mx-auto lg:size-8/12" src="/images/projects/TFH/AnimMontageImg.png" alt="TFH_AnimNotifs Placeholder" />*/}
                             <video
-                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-8/12"
+                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-12/17"
                                 src = "/videos/theFirstHero/Animation%20Montages%20Showcase.mp4"
                                 autoPlay={true}
                                 loop={true}
@@ -192,7 +192,7 @@ function TheFirstHeroPage() {
                         {/* Saving & Loading */}
                         <div className="flex md:flex-col lg:flex-row pt-12">
                             <video
-                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-8/12"
+                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-12/17"
                                 src = "/videos/theFirstHero/InventorySaveLoad.mp4"
                                 autoPlay={true}
                                 loop={true}
@@ -220,6 +220,65 @@ function TheFirstHeroPage() {
                             <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Equipment Component</h1>
+                                    <p className="text-lg pt-4">For all of my components I utilise blueprint interfaces heavily, these allow me to do 2 main things. Get
+                                        references to classes without having to cast, this is best thought about as instead of getting the whole library, you can just get the
+                                        specific book you need. Reason 2 being that it is a great form of blueprint communication, allowing me to call functions from other classes
+                                        without having a complete reference.</p>
+                                    <p className="text-lg pt-4">This component is responsible for spawning the characters weapons, handling weapon data,
+                                        communicating with the inventory UI and communicating with the combat components. This component handles the weapon data assets
+                                        which hold the weapon variables needed. Such as mesh, animation montage, damage, etc.</p>
+                                    <p className="text-lg pt-4">On the side are my variables and functions, as well as the interface functions. I make it a
+                                        priority to practice clean and neat code and categorisation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Enemies Section */}
+                    <div id="enemies" className="pt-14 flex-col justify-items-start">
+
+                        {/*Enemies Showcase*/}
+                        <div className="pt-10 flex-col justify-items-center">
+                            <h1 className="text-4xl pb-6">Enemies Showcase</h1>
+                            <video
+                                className = "size-8/12"
+                                src = "/videos/theFirstHero/EnemiesShowcase.mp4"
+                                autoPlay = {true}
+                                loop = {true}
+                                muted = {true}
+                            >
+                            </video>
+                        </div>
+
+                        {/* Enemy Types */}
+                        <div className="flex md:flex-col lg:flex-row pt-12">
+                            <video
+                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-12/17"
+                                src = "/videos/theFirstHero/EnemyTypes.mp4"
+                                autoPlay={true}
+                                loop={true}
+                            ></video>
+                            <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                                <div className="p-4 text-wrap text-left">
+                                    <h1 className="text-3xl">Enemy Types</h1>
+                                    <p className="text-lg pt-4">There are 3 types of enemies, the basic enemy, fast enemy, and heavy enemy. These enemies all have different
+                                    behaviours, damage amounts and functionality.</p>
+                                    <p className="text-lg pt-4">The fast enemy retreats to safety so it can't be hit, then attacks when the time is right. It is the only 
+                                    enemy that can walk backwards and it has the furthest stagger distance as it is the lightest enemy.</p>
+                                    <p className="text-lg pt-4">The basic enemy is the average mob, it comes towards you and attacks when in range. It has more health than 
+                                    the fast enemy, does more damage and doesn't stagger as far.</p>
+                                    <p className="text-lg pt-4">Finally, the heavy enemy, this enemy doesn't stagger at all and does the most damage. It also has the most health 
+                                    but is very slow. You can easily dodge it's attacks or walk out of range.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Enemy Development */}
+                        <div className="flex md:flex-col lg:flex-row pt-10">
+                            <Gallery items={equipmentComponentItems}/>
+                            <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                                <div className="p-4 text-wrap text-left">
+                                    <h1 className="text-3xl">Enemy Development</h1>
                                     <p className="text-lg pt-4">For all of my components I utilise blueprint interfaces heavily, these allow me to do 2 main things. Get
                                         references to classes without having to cast, this is best thought about as instead of getting the whole library, you can just get the
                                         specific book you need. Reason 2 being that it is a great form of blueprint communication, allowing me to call functions from other classes
