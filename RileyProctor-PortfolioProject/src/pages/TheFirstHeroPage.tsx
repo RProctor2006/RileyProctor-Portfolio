@@ -1,4 +1,16 @@
+
+{/* Site Components */}
+import Gallery, { type MediaItem } from "../components/Gallery.tsx";
+
+{/* Essentials */}
 import { Link } from 'react-router-dom'
+
+const galleryItems: MediaItem[] = [
+    { type: "image", src: "/images/projects/TFH/LockOnBlueprint.png" },
+    { type: "image", src: "/images/projects/TFH/LockOnFunctions.png" },
+    { type: "image", src: "/images/projects/TFH/LockOnVariables.png" },
+    { type: "video", src: "/videos/theFirstHero/LockOnCodeShowcase.mp4" }
+]
 
 function TheFirstHeroPage() {
     return (
@@ -69,21 +81,34 @@ function TheFirstHeroPage() {
 
                     {/*Animation Montages Section*/}
                     <div className="flex md:flex-col lg:flex-row pt-12">
-                        <img className="md:size-9/12 md:mx-auto lg:h-85 mb-4" src="/images/placeholders/TFH_AnimNotifs_Placeholder.png" alt="TFH_AnimNotifs Placeholder" />
+                        {/*<img className="md:size-9/12 md:mx-auto lg:size-8/12" src="/images/projects/TFH/AnimMontageImg.png" alt="TFH_AnimNotifs Placeholder" />*/}
+                        <video
+                            className="lg:size-8/12"
+                            src = "/videos/theFirstHero/Animation%20Montages%20Showcase.mp4"
+                            autoPlay={true}
+                            loop={true}
+                        ></video>
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Animation Montages</h1>
                                 <p className="text-lg pt-4">I designed the combat system to be animation driven, this revolves around the Animation Montage system
                                 in Unreal Engine. I utilised the animation notify classes in order to trigger certain events. This includes: Activating weapon hitboxes,
                                 Motion Warping, Invincibility Frames on rolls, Input windows and more!</p>
-                                <p className="text-lg pt-4">This system is ideal as it allows for more natural feeling combat, instead of inconveniencing myself with hard coded timings, I can make dynamic, reusable notify events that I can add to whatever animation montage I require.</p>
+                                <p className="text-lg pt-4">This system is ideal as it allows for more natural feeling combat, instead of inconveniencing myself with 
+                                    hard coded timings, I can make dynamic, reusable notify events that I can add to whatever animation montage I require.</p>
+                                <p className="text-lg pt-4">As you can see in this video, we have the timeline of the animation and in this timeline are
+                                the animation notify events that do specific tasks. Each one of these animation notifies follows the SOLID programming principles,
+                                specifically the Single Responsibility and the Dependency Inversion principles.</p>
                             </div>
                         </div>
                     </div>
 
                     {/*Lock On Section*/}
                     <div className="flex md:flex-col lg:flex-row pt-10">
-                        <img className="md:size-9/12 lg:h-85 md:mx-auto mb-4" src="/images/projects/TFH/TFH_LockOnFlowchart.png" alt="TFH_AnimNotifs Placeholder" />
+                        {/*<img className="md:size-9/12 lg:h-85 md:mx-auto mb-4" src="/images/projects/TFH/TFH_LockOnFlowchart.png" alt="TFH_AnimNotifs Placeholder" />*/}
+
+                        <Gallery items={galleryItems} width={970} height={420}/>
+                        
                         <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Lock On System</h1>
