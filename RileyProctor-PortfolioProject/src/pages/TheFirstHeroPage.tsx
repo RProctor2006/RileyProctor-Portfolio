@@ -7,10 +7,12 @@ function TheFirstHeroPage() {
             {/*Project Intro Section*/}
             <div className="pt-20 flex flex-col max-w-1/2">
                 {/*Go Back Button*/}
-                <div className="flex justify-start">
+                <div className="flex  pb-2 text-2xl">
                     <Link to="/">
-                        <button className=" text-2xl cursor-pointer text-black dark:text-white"> &lt; Go Back</button>
+                        <button className="justify-start cursor-pointer text-black dark:text-white"> &lt; Go Back</button>
                     </Link>
+                    
+                    <h1 className="mx-auto text-4xl">The First Hero</h1>
                 </div>
 
                 {/*Image Pic (Replace with gif or video) */}
@@ -115,8 +117,20 @@ function TheFirstHeroPage() {
 
                 {/*Inventory System Section*/}
                 <div className="pt-14 flex-col justify-items-start">
-                    <h1 className="text-4xl ">Inventory System</h1>
 
+                    {/*Inventory System Showcase*/}
+                    <div className="pt-10 flex-col justify-items-center">
+                        <h1 className="text-4xl pb-6">Inventory Showcase</h1>
+                        <video
+                            className = "size-8/12"
+                            src = "/videos/theFirstHero/CombatShowcase.mp4"
+                            autoPlay = {true}
+                            loop = {true}
+                            muted = {true}
+                        >
+                        </video>
+                    </div>
+                    
                     {/*Animation Montages Section*/}
                     <div className="flex md:flex-col lg:flex-row pt-12">
                         <img className="md:size-9/12 md:mx-auto lg:h-85 mb-4" src="/images/placeholders/TFH_AnimNotifs_Placeholder.png" alt="TFH_AnimNotifs Placeholder" />
@@ -160,18 +174,6 @@ function TheFirstHeroPage() {
                                     other components, namely, the health and equipment components I have, which I will explain in further detail later. </p>
                             </div>
                         </div>
-                    </div>
-
-                    {/*Inventory System Showcase*/}
-                    <div className="pt-10 flex-col justify-items-start">
-                        <h1 className="text-3xl">Inventory Showcase</h1>
-                        <iframe width="960" height="540"
-                                src="https://www.youtube.com/embed/K8uVbyoCZ8s?si=xHEGanYorwEvBw2u"
-                                title="Combat Showcase Video" frameBorder="0"
-                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen>
-                        </iframe>
                     </div>
                 </div>
             </div>
