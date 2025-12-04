@@ -22,7 +22,7 @@ const Gallery: React.FC<MediaGalleryProps> = ({
     return (
         <div className = "flex flex-col items-center gap-4">
             {/* Media Box */}
-            <div className={`md:min-w-[1080px] md:min-h-[607px] md:max-h-[607px] dark:bg-darkbgsec rounded-xl overflow-hidden flex justify-center items-center`}>
+            <div className={`lg:min-w-[1080px] lg:min-h-[607px] lg:max-h-[607px] dark:bg-darkbgsec  overflow-hidden flex justify-center items-center`}>
                 {current.type === "image" ? (
                     <img 
                         src={current.src}
@@ -39,7 +39,7 @@ const Gallery: React.FC<MediaGalleryProps> = ({
             </div>
 
             {/* Controls */}
-            <div className="flex gap-4">
+            <div className="flex gap-4 md:pb-6">
                 <button onClick={goPrev} className="px-4 py-2 bg-lightacc1 dark:bg-darklightsec rounded-lg shadow hover:opacity-80 transition">
                     ←
                 </button>
