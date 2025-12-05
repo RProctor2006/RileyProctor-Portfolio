@@ -36,34 +36,30 @@ function TheFirstHeroPage() {
                 <a href="#enemies" className="hover:text-lightacc2 dark:hover:text-darklightsec">Enemies</a>
             </aside>
             
-            <div className="flex-col justify-items-center">
+            <div className="">
                 {/* Project Intro Section */}
-                <div className="pt-20 flex flex-col max-w-1/2">
+                <div className="pt-20 flex-col justify-items-center">
                     {/* Go Back Button */}
-                    <div className="flex pb-2  lg:text-2xl">
+                    <div className="pb-2 max-w-1/2 flex lg:text-2xl">
                         <Link to="/">
-                            <button className="justify-start cursor-pointer text-black dark:text-white"> &lt; Go Back</button>
+                            <button className="cursor-pointer text-black dark:text-white"> &lt; Go Back</button>
                         </Link>
 
-                        <h1 className="mx-auto md:text-3xl lg:text-4xl">The First Hero</h1>
+                        <h1 className="md:text-3x flex-1/2 lg:text-4xl">The First Hero</h1>
                     </div>
 
                     {/* Project Showcase Video */}
                     <video
-                        className = "size-full mx-auto"
+                        className = "size-full max-w-1/2 mx-auto"
                         src = "/videos/theFirstHero/TheFirstHeroShowcase.mp4"
                         autoPlay={true}
                         loop={true}
                         muted={true}
                     ></video>
-                </div>
 
-
-
-                <div className="max-w-8/12" >
                     {/*Info Boxes Underneath*/}
                     <div className="flex flex-row mt-6">
-                        <div className="dark:bg-darkbgsec w-1/2 mr-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                        <div className="dark:bg-darkbgsec w-1/3 mr-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             {/*About Box*/}
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">About</h1>
@@ -72,7 +68,7 @@ function TheFirstHeroPage() {
                             </div>
                         </div>
 
-                        <div className="dark:bg-darkbgsec w-1/2 ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                        <div className="dark:bg-darkbgsec w-1/3 ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                             {/*Project Info Box*/}
                             <div className="p-4 text-wrap text-left">
                                 <h1 className="text-3xl">Project Info</h1>
@@ -82,6 +78,12 @@ function TheFirstHeroPage() {
                             </div>
                         </div>
                     </div>
+                </div>
+
+
+
+                <div className="p-4" >
+                    
 
                     {/*Combat System Section*/}
                     <div id="combat" className="pt-14 flex-col justify-items-start">
@@ -102,16 +104,16 @@ function TheFirstHeroPage() {
 
 
                         {/*Animation Montages Section*/}
-                        <div className="flex md:flex-col lg:flex-row pt-12">
+                        <div className="flex flex-row justify-items-center pt-12">
                             {/*<img className="md:size-9/12 md:mx-auto lg:size-8/12" src="/images/projects/TFH/AnimMontageImg.png" alt="TFH_AnimNotifs Placeholder" />*/}
                             <video
-                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-12/17"
+                                className="max-w-2/3"
                                 src = "/videos/theFirstHero/Animation%20Montages%20Showcase.mp4"
                                 autoPlay={true}
                                 loop={true}
                             ></video>
                             
-                            <div className=" md:min-w-8/12 lg:min-w-auto dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="max-w-1/3 dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Animation Montages</h1>
                                     <p className="text-lg pt-4">I designed the combat system to be animation driven, this revolves around the Animation Montage system
