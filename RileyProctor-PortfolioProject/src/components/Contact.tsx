@@ -19,7 +19,7 @@ function Contact() {
     
     return (
         <section id="contact" className="w-full flex justify-center pt-19 md:max-w-225 mx-auto h-fit text-center">
-            <div id="contact" className="sm:min-w-[45vh] bg-gray-900 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl dark:bg-darkbgsec dark:shadow-darkbglight/50  dark:outline-darkbglight text-white">
+            <div className="sm:min-w-[45vh] bg-gray-900 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl dark:bg-darkbgsec dark:shadow-darkbglight/50  dark:outline-darkbglight text-white">
                 <h2 className="sm:mt-4 sm:text-3xl md:text-5xl font-bold mb-10 dark:text-white">Contact Me</h2>
 
                 {/* Social Icons */}
