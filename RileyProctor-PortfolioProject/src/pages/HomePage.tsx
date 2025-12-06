@@ -16,8 +16,7 @@ function HomePage() {
 
             {window.innerWidth > 768 ? (
                 <div className="md:fixed right-0 bottom-0 p-3"> <ThemeSwitchButton/> </div>
-            ) : (<div />)} 
-            
+            ) : (<div />)}   
             
             <main>
                 <Hero />
