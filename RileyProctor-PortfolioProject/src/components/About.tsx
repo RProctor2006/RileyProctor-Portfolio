@@ -8,7 +8,7 @@ const About = () => {
                 <img
                     src="/images/Portrait.jpg"
                     alt="Project"
-                    className="float-left w-64 h-auto mr-6 rounded-lg shadow"
+                    className="float-left w-64 h-auto md:mb-2 lg:mb-0 mr-6 rounded-lg shadow"
                 />
 
                 <p className="text-xl">
@@ -17,7 +17,7 @@ const About = () => {
                     always been curious as to how games are actually made.
                 </p>
                 
-                <p className="text-xl mt-4">
+                <p className="text-xl md:mt-6 lg:mt-4">
                     Starting at the age of 13, me and a friend decided to just tinker about and try and see what we could do in Unreal Engine since we
                     had heard a lot about it.
                 </p>
