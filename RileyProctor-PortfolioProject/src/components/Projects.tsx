@@ -9,9 +9,9 @@ const myProjects = [
         languagesUsed: 'Unreal Engine Blueprints',
         description: 'A souls-inspired dungeon crawler where you must progress through the dungeon to save your village!',
         image: `/images/projects/TheFirstHeroImg.png`,
-        pageLink: '/TheFirstHero',
+        pageLink: '/TheFirstHero#home',
         
-        projectLink: '',
+        projectLink: 'https://github.com/RProctor2006/GamesFund-Project',
     },
     {
         //Card Elements
