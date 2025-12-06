@@ -38,51 +38,50 @@ function TheFirstHeroPage() {
 
             <div className="p-8">
                 {/* Project Intro Section */}
-                <section className="pt-20 flex-col">
+                <section className="pt-20 flex-col max-w-1/2 mx-auto">
                     {/* Go Back Button */}
-                    <div className="pb-2 max-w-1/2 mx-auto flex items-center lg:text-2xl">
+                    <div className="pb-2 mx-auto flex items-center lg:text-2xl">
 
                         <Link to="/">
                             <button className="justify-start cursor-pointer text-black dark:text-white"> &lt; Go Back</button>
                         </Link>
 
                         <h1 className="md:text-3x flex-1/2 lg:text-4xl mx-auto">The First Hero</h1>
-
                     </div>
 
                     {/* Project Showcase Video */}
                     <video
-                        className = "size-full mx-auto"
+                        className = "mx-auto"
                         src = "/videos/theFirstHero/TheFirstHeroShowcase.mp4"
                         autoPlay={true}
                         loop={true}
                         muted={true}
                     ></video>
+                </section>
 
-                    <div className="max-w-8/12" >
-                        {/*Info Boxes Underneath*/}
-                        <div className="flex flex-row justify-center mt-6">
-                            <div className="dark:bg-darkbgsec w-1/3 mr-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
-                                {/*About Box*/}
-                                <div className="p-4 text-wrap text-left">
-                                    <h1 className="text-3xl">About</h1>
-                                    <p className="text-lg pt-4">The First Hero was my final project for my 1st year of University. It is heavily inspired by FromSoftware's souls franchise, it features an in-depth combat
-                                        system and 3 unique enemy types to learn and fight against!</p>
-                                </div>
+                <div className="max-w-2/3 mx-auto" >
+                    {/*Info Boxes Underneath*/}
+                    <div className="flex flex-row justify-center mt-6">
+                        <div className="dark:bg-darkbgsec w-1/2 mr-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            {/*About Box*/}
+                            <div className="p-4 text-wrap text-left">
+                                <h1 className="text-3xl">About</h1>
+                                <p className="text-lg pt-4">The First Hero was my final project for my 1st year of University. It is heavily inspired by FromSoftware's souls franchise, it features an in-depth combat
+                                    system and 3 unique enemy types to learn and fight against!</p>
                             </div>
+                        </div>
 
-                            <div className="dark:bg-darkbgsec w-1/2 ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
-                                {/*Project Info Box*/}
-                                <div className="p-4 text-wrap text-left">
-                                    <h1 className="text-3xl">Project Info</h1>
-                                    <p className="text-lg pt-4">Role: Lead Developer</p>
-                                    <p className="text-lg pt-4">Engine: Unreal Engine 5</p>
-                                    <p className="text-lg pt-4">Languages: UE Blueprints</p>
-                                </div>
+                        <div className="dark:bg-darkbgsec w-1/2 ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            {/*Project Info Box*/}
+                            <div className="p-4 text-wrap text-left">
+                                <h1 className="text-3xl">Project Info</h1>
+                                <p className="text-lg pt-4">Role: Lead Developer</p>
+                                <p className="text-lg pt-4">Engine: Unreal Engine 5</p>
+                                <p className="text-lg pt-4">Languages: UE Blueprints</p>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <div className="p-4" >
                     {/*Combat System Section*/}
