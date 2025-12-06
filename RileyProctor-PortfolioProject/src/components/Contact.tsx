@@ -11,7 +11,7 @@ const Contact = () => {
                 <a href="https://github.com/RProctor2006" target="_blank" rel="noopener noreferrer" className="text-4xl dark:hover:text-darklight hover:text-lightacc1">
                     <FaGithub />
                 </a>
-                <a href="https://linkedin.com/in/riley-proctor" target="_blank" rel="noopener noreferrer" className="text-4xl dark:hover:text-darklight hover:text-lightacc1">
+                <a href="https://www.linkedin.com/in/riley-proctor-12b695254" target="_blank" rel="noopener noreferrer" className="text-4xl dark:hover:text-darklight hover:text-lightacc1">
                     <FaLinkedin />
                 </a>
                 <a href="https://riley-proctor.itch.io" target="_blank" rel="noopener noreferrer" className="text-4xl dark:hover:text-darklight hover:text-lightacc1">
