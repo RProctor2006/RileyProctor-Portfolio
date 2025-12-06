@@ -110,13 +110,23 @@ const ProjectCarousel = ({ projects }: Props) => {
                             
 
                             {!showDetails && i === activeSlide && (
-                                <Link to={project.pageLink}>
-                                    <button
-                                        className="my-auto px-4 py-2 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
-                                    >
-                                        View Project
-                                    </button>
-                                </Link>
+                                <div className="flex flex-col">
+                                    <Link to={project.pageLink}>
+                                        <button
+                                            className="my-auto px-4 py-2 mt-6 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
+                                        >
+                                            View Project Page
+                                        </button>
+                                    </Link>
+
+                                    <Link to={project.projectLink}>
+                                        <button
+                                            className="my-auto px-4 py-2 mt-6 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
+                                        >
+                                            Project Repository
+                                        </button>
+                                    </Link>
+                                </div>
                             )}
                         </div>
                     </div>
