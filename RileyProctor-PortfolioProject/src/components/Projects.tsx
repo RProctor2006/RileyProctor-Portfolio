@@ -52,7 +52,7 @@ const myProjects = [
 const Projects = () => {
     return (
         <section id="projects" className=" max-w-6xl mx-auto px-6 pt-12 pb-20 lg:min-w-3/4 xl:min-w-3/5">
-            <h2 className="text-4xl font-bold mb-8 dark:text-white">Projects</h2>
+            <h2 className="sm:text-2xl md:text-4xl font-bold mb-8 dark:text-white">Projects</h2>
             {/* Project Carousel */}
             {window.innerWidth > 360 ? (
                 <section id="projects-carousel" className="px-4 md:px-12">
