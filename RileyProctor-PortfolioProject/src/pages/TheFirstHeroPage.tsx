@@ -27,9 +27,8 @@ const equipmentComponentItems: MediaItem[] = [
 function TheFirstHeroPage() {
     return (
         <div id = "home" className="min-h-screen mx-auto flex justify-items-center bg-white text-black dark:bg-darkbg dark:text-white">
-
             {/* Side Navigation */}
-            <aside className="w-48 text-2xl sticky top-24 h-screen flex flex-col items-center gap-45 p-4 border-r-3 border-lightacc2 dark:border-darklightsec">
+            <aside className="w-48 text-2xl sticky top-24 bottom-24 h-[90vh] flex flex-col items-center gap-45 p-4 border-r-3 border-lightacc2 dark:border-darklightsec">
                 <a href="#home" className="hover:text-lightacc2 dark:hover:text-darklightsec">Start</a>
                 <a href="#combat" className="hover:text-lightacc2 dark:hover:text-darklightsec">Combat System</a>
                 <a href="#inventory" className="hover:text-lightacc2 dark:hover:text-darklightsec">Inventory System</a>
@@ -296,7 +295,6 @@ function TheFirstHeroPage() {
                     </section>
                 </div>
             </div>
-
         </div>
     )
 }
