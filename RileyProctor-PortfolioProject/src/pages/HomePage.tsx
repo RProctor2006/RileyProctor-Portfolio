@@ -14,9 +14,9 @@ function HomePage() {
         <div id="root" className="w-full h-full p-8 text-center bg-white text-black dark:bg-darkbg dark:text-white">
             <Navbar />
 
-            {window.innerWidth > 768 ? (
-                <div className="md:fixed right-0 bottom-0 p-3"> <ThemeSwitchButton/> </div>
-            ) : (<div />)}   
+
+            <div className="sm:hidden lg:block md:fixed right-0 bottom-0 p-3"> <ThemeSwitchButton/> </div>
+            <div className="lg:hidden"/> 
             
             <main>
                 <Hero />

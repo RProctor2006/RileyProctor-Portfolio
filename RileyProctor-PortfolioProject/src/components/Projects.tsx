@@ -1,5 +1,6 @@
 ﻿//import React from 'react'9
 import ProjectCarousel from './ProjectCarousel'
+import {Link} from "react-router-dom";
 
 const myProjects = [
     {
@@ -51,17 +52,47 @@ const myProjects = [
 
 const Projects = () => {
     return (
-        <section id="projects" className=" max-w-6xl mx-auto px-6 pt-12 pb-20 lg:min-w-3/4 xl:min-w-3/5">
-            <h2 className="sm:text-2xl md:text-4xl font-bold mb-8 dark:text-white">Projects</h2>
-            {/* Project Carousel */}
-            {window.innerWidth > 360 ? (
-                <section id="projects-carousel" className="px-4 md:px-12">
+        <section id="projects" className="flex w-full justify-center max-w-6xl mx-auto px-6 pt-12 pb-20 lg:min-w-3/4 xl:min-w-3/5">
+            <div className="sm:min-w-[45vh] mx-auto">
+                <h2 className="sm:text-2xl md:text-4xl font-bold mb-8 dark:text-white">Projects</h2>
+
+                {/* Project Carousel */}
+                <section id="projects-carousel" className="hidden md:block px-4 md:px-12">
                     <ProjectCarousel projects={myProjects} />
                 </section>
-            ): (
-                <h2 className = "text-4xl font-bold mb-8 dark:text-white">Coming Soon!</h2>
-            ) }
-            
+
+                <section className="grid grid-cols-2 gap-4 md:hidden">
+                    {myProjects.map((project, i) => (
+                        <div key={i} className="bg-white dark:bg-darkbgsec p-3 rounded-lg shadow-md">
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full aspect-square object-cover rounded-md"
+                            />
+                            <h3 className="text-md mt-2 font-semibold dark:text-white">
+                                {project.title}
+                            </h3>
+                            <div className="flex flex-col">
+                                <Link to={project.pageLink}>
+                                    <button
+                                        className="text-xs my-auto px-4 py-2 mt-2 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
+                                    >
+                                        View Project Page
+                                    </button>
+                                </Link>
+
+                                <Link to={project.projectLink}>
+                                    <button
+                                        className="text-xs my-auto px-4 py-2 mt-4 bg-darkbg font-bold cursor-pointer text-white rounded-lg hover:bg-lightbutton dark:hover:bg-darklightsec hover:text-black transition-colors duration-200"
+                                    >
+                                        Project Repository
+                                    </button>
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+                </section>
+            </div>
         </section>
     );
 };
