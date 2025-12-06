@@ -2,8 +2,9 @@
 
 const Hero = () => {
     return (
-        <section id="home" className="sm:w-full mx-auto  sm:h-50 sm:mt-28 md:h-[576px] md:w-[1024px] lg:w-[1360px] lg:h-[765px]  md:mt-15 lg:mt-12 ">
+        <section id="home" className="mx-auto sm:mt-28 md:h-auto md:w-full lg:w-1/2 lg:h-auto md:mt-15 lg:mt-12 ">
             <video
+                className=" md:min-w-full"
                 src="/videos/theFirstHero/CombatShowcase.mp4"
                 autoPlay={true}
                 loop={true}
