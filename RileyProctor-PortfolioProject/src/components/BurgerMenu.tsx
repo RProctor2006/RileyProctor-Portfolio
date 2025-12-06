@@ -17,7 +17,7 @@ const BurgerMenu = () => {
     }, []);
     
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex md:hidden flex-col items-center">
             <button
                 onClick={() => setIsPressed(!isPressed)}
             >
