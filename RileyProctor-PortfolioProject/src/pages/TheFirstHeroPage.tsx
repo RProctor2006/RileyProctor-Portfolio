@@ -24,6 +24,13 @@ const equipmentComponentItems: MediaItem[] = [
     { type: "image", src: "/images/projects/TFH/AnimVarsInterface.png" }
 ]
 
+const enemyBehaviourItems: MediaItem[] = [
+    { type: "image", src: "/images/projects/TFH/FastEnemyBehaviourTree.png" },
+    { type: "image", src: "/images/projects/TFH/EnemyBlackboard.png" },
+    { type: "image", src: "/images/projects/TFH/EnemyStatesEnum.png" },
+    { type: "image", src: "/images/projects/TFH/EnemyBehaviourFolder.png" }
+]
+
 function TheFirstHeroPage() {
     return (
         <div id = "home" className="min-h-screen mx-auto flex justify-items-center bg-white text-black dark:bg-darkbg dark:text-white">
@@ -108,7 +115,7 @@ function TheFirstHeroPage() {
                                 autoPlay={true}
                                 loop={true}
                             ></video>
-                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg h-fit dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Animation Montages</h1>
                                     <p className="text-lg pt-4">I designed the combat system to be animation driven, this revolves around the Animation Montage system
@@ -130,7 +137,7 @@ function TheFirstHeroPage() {
 
                             <Gallery items={lockOnItems}/>
 
-                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg h-fit dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Lock On System</h1>
                                     <p className="text-lg pt-4">The lock on system is one of the most complex systems in the project. I revisited it often during development
@@ -153,7 +160,7 @@ function TheFirstHeroPage() {
 
                             <Gallery items={combatComponentItems}/>
 
-                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg h-fit dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Combat Component</h1>
                                     <p className="text-lg pt-4">The lock on system and the rest of the combat system is programmed inside this combat component,
@@ -195,7 +202,7 @@ function TheFirstHeroPage() {
                                 autoPlay={true}
                                 loop={true}
                             ></video>
-                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg h-fit dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Saving and Loading</h1>
                                     <p className="text-lg pt-4">One of the most challenging aspects of the inventory system was saving the positions of items in the
@@ -215,7 +222,7 @@ function TheFirstHeroPage() {
                         {/* Equipment Component */}
                         <section className="flex md:flex-col lg:flex-row pt-12">
                             <Gallery items={equipmentComponentItems}/>
-                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 h-fit shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Equipment Component</h1>
                                     <p className="text-lg pt-4">For all of my components I utilise blueprint interfaces heavily, these allow me to do 2 main things. Get
@@ -259,7 +266,7 @@ function TheFirstHeroPage() {
                                 autoPlay={true}
                                 loop={true}
                             ></video>
-                            <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="dark:bg-darkbgsec h-fit ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Enemy Types</h1>
                                     <p className="text-lg pt-4">There are 3 types of enemies, the basic enemy, fast enemy, and heavy enemy. These enemies all have different
@@ -277,7 +284,7 @@ function TheFirstHeroPage() {
                         {/* Enemy Development */}
                         <section className="flex md:flex-col lg:flex-row pt-10">
                             <Gallery items={equipmentComponentItems}/>
-                            <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="dark:bg-darkbgsec h-fit ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Enemy Development</h1>
                                     <p className="text-lg pt-4">For all of my components I utilise blueprint interfaces heavily, these allow me to do 2 main things. Get
@@ -289,6 +296,27 @@ function TheFirstHeroPage() {
                                         which hold the weapon variables needed. Such as mesh, animation montage, damage, etc.</p>
                                     <p className="text-lg pt-4">On the side are my variables and functions, as well as the interface functions. I make it a
                                         priority to practice clean and neat code and categorisation</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Enemy Behaviours */}
+                        <section className="flex md:flex-col lg:flex-row pt-10">
+                            <Gallery items={enemyBehaviourItems}/>
+                            <div className="dark:bg-darkbgsec h-fit ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                                <div className="p-4 text-wrap text-left">
+                                    <h1 className="text-3xl">Enemy Behaviours</h1>
+                                    <p className="text-lg pt-4">To create the behaviour for my enemies I used the Unreal Engine blackboard 
+                                    and behaviour tree classes. The blackboard holds all the variables that the enemy behaviour will need, I 
+                                    can use this blackboard for all 3 enemy types as they will all need the same variables. You can see in 
+                                    the first image, the behaviour tree for the fast enemy. This enemy is unique as it has to also keep its 
+                                    distance from the player.</p>
+                                    <p className="text-lg pt-4">To keep track of the states the enemies can be in, I created an enum. This enum 
+                                    comes with descriptions for all of the states and what their uses are. The blackboard has this enum as a variable 
+                                    that can be used as a condition to check what part of the behaviour tree should be ran.</p>
+                                    <p className="text-lg pt-4">You can see the behaviour folder for the enemies, this folder includes all of the 
+                                    tasks that the enemies will do, subtrees, EQS & task services. It's important to keep everything organised when 
+                                    working with a lot of classes.</p>
                                 </div>
                             </div>
                         </section>
