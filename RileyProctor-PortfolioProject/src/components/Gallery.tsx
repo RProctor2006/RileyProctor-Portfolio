@@ -20,9 +20,9 @@ const Gallery: React.FC<MediaGalleryProps> = ({
     const goPrev = () => setIndex((i) => (i - 1 + items.length) % items.length);
     
     return (
-        <div className = "flex flex-col items-center gap-4">
+        <div className = "pr-4 min-w-2/3 max-w-2/3 flex mx-auto flex-col items-center gap-4">
             {/* Media Box */}
-            <div className={`lg:min-w-[1080px] lg:min-h-[607px] lg:max-h-[607px] dark:bg-darkbgsec  overflow-hidden flex justify-center items-center`}>
+            <div className={` dark:bg-darkbgsec overflow-hidden flex justify-center items-center`}>
                 {current.type === "image" ? (
                     <img 
                         src={current.src}
