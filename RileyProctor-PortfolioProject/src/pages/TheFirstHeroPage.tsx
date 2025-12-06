@@ -29,23 +29,25 @@ function TheFirstHeroPage() {
         <div id = "home" className="min-h-screen mx-auto flex justify-items-center bg-white text-black dark:bg-darkbg dark:text-white">
 
             {/* Side Navigation */}
-            <aside className="w-48 text-2xl sticky top-24 h-screen flex flex-col items-center gap-45 p-4 border-r border-lightacc2 dark:border-darklightsec">
+            <aside className="w-48 text-2xl sticky top-24 h-screen flex flex-col items-center gap-45 p-4 border-r-3 border-lightacc2 dark:border-darklightsec">
                 <a href="#home" className="hover:text-lightacc2 dark:hover:text-darklightsec">Start</a>
                 <a href="#combat" className="hover:text-lightacc2 dark:hover:text-darklightsec">Combat System</a>
                 <a href="#inventory" className="hover:text-lightacc2 dark:hover:text-darklightsec">Inventory System</a>
                 <a href="#enemies" className="hover:text-lightacc2 dark:hover:text-darklightsec">Enemies</a>
             </aside>
             
-            <div className="flex-col justify-items-center">
+            <div className="p-8">
                 {/* Project Intro Section */}
-                <div className="pt-20 flex flex-col max-w-1/2">
+                <section className="pt-20 flex-col">
                     {/* Go Back Button */}
-                    <div className="flex pb-2  lg:text-2xl">
+                    <div className="pb-2 max-w-1/2 mx-auto flex items-center lg:text-2xl">
+
                         <Link to="/">
                             <button className="justify-start cursor-pointer text-black dark:text-white"> &lt; Go Back</button>
                         </Link>
+                        
+                        <h1 className="md:text-3x flex-1/2 lg:text-4xl mx-auto">The First Hero</h1>
 
-                        <h1 className="mx-auto md:text-3xl lg:text-4xl">The First Hero</h1>
                     </div>
 
                     {/* Project Showcase Video */}
@@ -56,38 +58,37 @@ function TheFirstHeroPage() {
                         loop={true}
                         muted={true}
                     ></video>
-                </div>
 
-
-
-                <div className="max-w-8/12" >
-                    {/*Info Boxes Underneath*/}
-                    <div className="flex flex-row mt-6">
-                        <div className="dark:bg-darkbgsec w-1/2 mr-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
-                            {/*About Box*/}
-                            <div className="p-4 text-wrap text-left">
-                                <h1 className="text-3xl">About</h1>
-                                <p className="text-lg pt-4">The First Hero was my final project for my 1st year of University. It is heavily inspired by FromSoftware's souls franchise, it features an in-depth combat
-                                    system and 3 unique enemy types to learn and fight against!</p>
+                    <div className="max-w-8/12" >
+                        {/*Info Boxes Underneath*/}
+                        <div className="flex flex-row justify-center mt-6">
+                            <div className="dark:bg-darkbgsec w-1/3 mr-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                                {/*About Box*/}
+                                <div className="p-4 text-wrap text-left">
+                                    <h1 className="text-3xl">About</h1>
+                                    <p className="text-lg pt-4">The First Hero was my final project for my 1st year of University. It is heavily inspired by FromSoftware's souls franchise, it features an in-depth combat
+                                        system and 3 unique enemy types to learn and fight against!</p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="dark:bg-darkbgsec w-1/2 ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
-                            {/*Project Info Box*/}
-                            <div className="p-4 text-wrap text-left">
-                                <h1 className="text-3xl">Project Info</h1>
-                                <p className="text-lg pt-4">Role: Lead Developer</p>
-                                <p className="text-lg pt-4">Engine: Unreal Engine 5</p>
-                                <p className="text-lg pt-4">Languages: UE Blueprints</p>
+                            <div className="dark:bg-darkbgsec w-1/2 ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                                {/*Project Info Box*/}
+                                <div className="p-4 text-wrap text-left">
+                                    <h1 className="text-3xl">Project Info</h1>
+                                    <p className="text-lg pt-4">Role: Lead Developer</p>
+                                    <p className="text-lg pt-4">Engine: Unreal Engine 5</p>
+                                    <p className="text-lg pt-4">Languages: UE Blueprints</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-
+                </section>
+                
+                <div className="p-4" >
                     {/*Combat System Section*/}
-                    <div id="combat" className="pt-14 flex-col justify-items-start">
-
+                    <section id="combat" className="pt-14 pb-30 flex-col justify-items-start">
                         {/*Combat System Showcase*/}
-                        <div className="pt-10 flex-col justify-items-center">
+                        <div className="pt-10 flex-col mx-auto justify-items-center">
                             <h1 className="text-4xl pb-6">Combat Showcase</h1>
                             <video
                                 className = "md:size-full lg:size-8/12"
@@ -99,19 +100,17 @@ function TheFirstHeroPage() {
                             </video>
                         </div>
 
-
-
+                        
                         {/*Animation Montages Section*/}
-                        <div className="flex md:flex-col lg:flex-row pt-12">
+                        <section className="flex md:flex-col lg:flex-row pt-12">
                             {/*<img className="md:size-9/12 md:mx-auto lg:size-8/12" src="/images/projects/TFH/AnimMontageImg.png" alt="TFH_AnimNotifs Placeholder" />*/}
                             <video
-                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-12/17"
+                                className="max-w-2/3 pr-4"
                                 src = "/videos/theFirstHero/Animation%20Montages%20Showcase.mp4"
                                 autoPlay={true}
                                 loop={true}
                             ></video>
-                            
-                            <div className=" md:min-w-8/12 lg:min-w-auto dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Animation Montages</h1>
                                     <p className="text-lg pt-4">I designed the combat system to be animation driven, this revolves around the Animation Montage system
@@ -124,15 +123,16 @@ function TheFirstHeroPage() {
                                         specifically the Single Responsibility and the Dependency Inversion principles.</p>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
+                        
                         {/*Lock On Section*/}
-                        <div className="flex md:flex-col lg:flex-row pt-10">
+                        <section className="flex md:flex-col lg:flex-row pt-12">
                             {/*<img className="md:size-9/12 lg:h-85 md:mx-auto mb-4" src="/images/projects/TFH/TFH_LockOnFlowchart.png" alt="TFH_AnimNotifs Placeholder" />*/}
 
                             <Gallery items={lockOnItems}/>
 
-                            <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Lock On System</h1>
                                     <p className="text-lg pt-4">The lock on system is one of the most complex systems in the project. I revisited it often during development
@@ -147,15 +147,15 @@ function TheFirstHeroPage() {
                                         and frequently running code.</p>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
                         {/*Component Section*/}
-                        <div className="flex md:flex-col lg:flex-row pt-10">
+                        <section className="flex md:flex-col lg:flex-row pt-10">
                             {/*<img className="md:size-9/12 lg:h-85 md:mx-auto pb-4" src="/images/placeholders/TFH_CombatComp_Placeholder.png" alt="TFH_Component Placeholder" />*/}
 
                             <Gallery items={combatComponentItems}/>
 
-                            <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Combat Component</h1>
                                     <p className="text-lg pt-4">The lock on system and the rest of the combat system is programmed inside this combat component,
@@ -168,16 +168,16 @@ function TheFirstHeroPage() {
                                         the functionality of the mechanics to their liking without having to delve into code and look at the inner workings.</p>
                                 </div>
                             </div>
-                        </div>
+                        </section>
+                    </section>
 
-
-                    </div>
-
+                    {/* Section Separator */}
+                    <div className="border-t-3 my-8 border-lightacc1 dark:border-darklight"/>
+                    
                     {/*Inventory System Section*/}
-                    <div id="inventory" className="pt-14 flex-col justify-items-start">
-
+                    <section id="inventory" className="pt-20 pb-30 flex-col justify-items-start">
                         {/*Inventory System Showcase*/}
-                        <div className="pt-10 flex-col justify-items-center">
+                        <div className="pt-10 flex-col mx-auto justify-items-center">
                             <h1 className="text-4xl pb-6">Inventory Showcase</h1>
                             <video
                                 className = "size-8/12"
@@ -190,14 +190,14 @@ function TheFirstHeroPage() {
                         </div>
 
                         {/* Saving & Loading */}
-                        <div className="flex md:flex-col lg:flex-row pt-12">
+                        <section className="flex md:flex-col lg:flex-row pt-12">
                             <video
-                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-12/17"
+                                className="max-w-2/3 pr-4"
                                 src = "/videos/theFirstHero/InventorySaveLoad.mp4"
                                 autoPlay={true}
                                 loop={true}
                             ></video>
-                            <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Saving and Loading</h1>
                                     <p className="text-lg pt-4">One of the most challenging aspects of the inventory system was saving the positions of items in the
@@ -212,12 +212,12 @@ function TheFirstHeroPage() {
                                         player controller for data persistence when the player opens and closes the inventory.</p>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
                         {/* Equipment Component */}
-                        <div className="flex md:flex-col lg:flex-row pt-10">
+                        <section className="flex md:flex-col lg:flex-row pt-12">
                             <Gallery items={equipmentComponentItems}/>
-                            <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
+                            <div className="ml-3 max-w-1/3 shadow-lg dark:bg-darkbgsec shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
                                     <h1 className="text-3xl">Equipment Component</h1>
                                     <p className="text-lg pt-4">For all of my components I utilise blueprint interfaces heavily, these allow me to do 2 main things. Get
@@ -231,14 +231,17 @@ function TheFirstHeroPage() {
                                         priority to practice clean and neat code and categorisation</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+                    </section>
 
+                    {/* Section Separator */}
+                    <div className="border-t-3 my-8 border-lightacc1 dark:border-darklight"/>
+                    
                     {/* Enemies Section */}
-                    <div id="enemies" className="pt-14 flex-col justify-items-start">
+                    <section id="enemies" className="pt-22 flex-col justify-items-start">
 
                         {/*Enemies Showcase*/}
-                        <div className="pt-10 flex-col justify-items-center">
+                        <div className="pt-10 flex-col mx-auto justify-items-center">
                             <h1 className="text-4xl pb-6">Enemies Showcase</h1>
                             <video
                                 className = "size-8/12"
@@ -251,9 +254,9 @@ function TheFirstHeroPage() {
                         </div>
 
                         {/* Enemy Types */}
-                        <div className="flex md:flex-col lg:flex-row pt-12">
+                        <section className="flex md:flex-col lg:flex-row pt-12">
                             <video
-                                className="md:size-10/12 md:mx-auto md:pb-4 lg:size-12/17"
+                                className="max-w-2/3 pr-4"
                                 src = "/videos/theFirstHero/EnemyTypes.mp4"
                                 autoPlay={true}
                                 loop={true}
@@ -271,10 +274,10 @@ function TheFirstHeroPage() {
                                     but is very slow. You can easily dodge it's attacks or walk out of range.</p>
                                 </div>
                             </div>
-                        </div>
+                        </section>
 
                         {/* Enemy Development */}
-                        <div className="flex md:flex-col lg:flex-row pt-10">
+                        <section className="flex md:flex-col lg:flex-row pt-10">
                             <Gallery items={equipmentComponentItems}/>
                             <div className="dark:bg-darkbgsec ml-3 shadow-lg shadow-lightacc2 outline-solid outline-lightacc2 rounded-xl">
                                 <div className="p-4 text-wrap text-left">
@@ -290,8 +293,8 @@ function TheFirstHeroPage() {
                                         priority to practice clean and neat code and categorisation</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+                    </section>
                 </div>
             </div>
             

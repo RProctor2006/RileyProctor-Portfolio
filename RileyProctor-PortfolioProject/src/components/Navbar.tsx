@@ -20,7 +20,7 @@ const Navbar = () => {
             className="fixed sm:w-dvw sm:text-sm sm:pr-6 sm:pl-2 top-0 left-0 right-0 bg-lightacc1/80 backdrop-blur-md shadow-md z-50 text-lighttext dark:bg-darklight dark:text-white dark:shadow-xl/30">
             <div className="max-w-6xl mx-auto py-4 flex flex-row items-center justify-between sm:gap-6 md:gap-8">
                 
-                <RouterLink to="/">
+                <RouterLink to="/#home">
                     <button
                         className="cursor-pointer sm:text-lg md:text-2xl font-bold"
                     >
