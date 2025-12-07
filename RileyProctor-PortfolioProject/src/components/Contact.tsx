@@ -42,13 +42,13 @@ function Contact() {
                 <form onSubmit={sendEmail} className="max-w-md mx-auto space-y-4 text-left ">
 
                     <div className="sm:w-[40vh] mx-auto md:w-full px-4 py-2 rounded bg-gray-800 dark:bg-darkbg border border-gray-700">
-                        <input name="from_name" placeholder="Your Name" className="w-full text-white bg-transparent outline-none caret-auto select-text placeholder-gray-400"></input>
+                        <input name="from_name" placeholder="Your Name" className="w-full text-white bg-transparent outline-none caret-white select-text placeholder-gray-400"></input>
                     </div>
                     <div className="sm:w-[40vh] mx-auto md:w-full px-4 py-2 rounded bg-gray-800 dark:bg-darkbg border border-gray-700">
-                        <input name="from_email" placeholder="Your Email" className="w-full text-white bg-transparent outline-none caret-auto placeholder-gray-400"></input>
+                        <input name="from_email" placeholder="Your Email" className="w-full text-white bg-transparent outline-none caret-white placeholder-gray-400"></input>
                     </div>
                     <div className="sm:w-[40vh] mx-auto md:w-full px-4 py-2 rounded bg-gray-800 dark:bg-darkbg border border-gray-700 focus:outline-none focus:ring-blue-500 overflow-hidden">
-                        <textarea name="message" placeholder="Your Message" rows={5} className="w-full text-white placeholder-gray-400 bg-transparent outline-none caret-auto"></textarea>
+                        <textarea name="message" placeholder="Your Message" rows={5} className="w-full text-white placeholder-gray-400 bg-transparent outline-none caret-white"></textarea>
                     </div>
                     <button type="submit" className="block sm:w-[40vh] mx-auto md:w-full bg-blue-600 hover:bg-lightbutton hover:text-black dark:bg-darkbg hover:bg-blue-700 dark:hover:bg-darklightsec dark:hover:text-white transition-colors text-white font-semibold py-2 px-4 rounded">
                         Send Message
